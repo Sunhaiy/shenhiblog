@@ -1,10 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import PrimeVue from 'primevue/config';
-import { Theme } from '@primevue/themes';
+import Aura from '@primevue/themes/aura';
+import 'primeicons/primeicons.css'
 const app =createApp(App)
-app.use(PrimeVue,{
-    theme:{
+app.use(PrimeVue, {
+    theme: {
         preset: Aura
     }
 });
