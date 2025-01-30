@@ -78,7 +78,8 @@
 
 #body {
   flex: 1;
-  
+  display: flex;
+  padding: 40px 10px;
 }
 #imglogo{
   width: 50px;
