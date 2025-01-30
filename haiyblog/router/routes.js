@@ -13,26 +13,33 @@ const router = createRouter(
         routes:[
             {
                 path:"/",
+                name:"zhuye",
                 component:zhuye
             },
             {
+
                 path:"/xiaochuan",
+                name:"xiaochuan",
                 component:xiaochuan
             },
             {
                 path:"/wode",
+                name:"wode",
                 component:wode
             },
             {
                 path:"/wenzhang",
+                name:"wenzhang",
                 component:wenzhang
             },
             {
                 path:"/liuyan",
+                name:"liuyan",
                 component:liuyan
             },
             {
                 path:"/laisheng",
+                name:"laisheng",
                 component:laisheng
             }
             
