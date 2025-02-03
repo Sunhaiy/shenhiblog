@@ -53,7 +53,7 @@
 }
 
 #navbtn {
-  width: 100%;
+  min-width: 200px;;
   display: flex;
   flex-direction: column;
   

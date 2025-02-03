@@ -14,8 +14,10 @@
 
         </div>
         <div id="center">
-            <span>Keep watching</span>
-            
+            <span id="title">Keep watching</span>
+            <div id="artcontiner">
+                <articles/>
+            </div>
         </div>
         <div id="bottom">
             <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
@@ -33,6 +35,7 @@ import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import Avatar from 'primevue/avatar';
 import SelectButton from 'primevue/selectbutton';
+import articles from '@/components/articles.vue';
 import { ref } from 'vue';
 
 const value = ref({ name: 'Option 1', value: 1 },);
@@ -86,7 +89,9 @@ const optionbootom = ref([
 #btnright {
     margin-right: 10px;
 }
-
+#title{
+    align-self: flex-start;
+}
 #selectbtn {
     flex: 2;
 }
@@ -95,6 +100,19 @@ const optionbootom = ref([
     flex: 1;
     display: flex;
     padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+#artcontiner{
+    
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 1350px;
+    align-items: center;
+    justify-self: center;
+    
 }
 
 #bottom {
