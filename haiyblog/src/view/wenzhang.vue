@@ -15,8 +15,11 @@
         </div>
         <div id="center">
             <span>Keep watching</span>
+            
         </div>
-        <div id="bottom">9</div>
+        <div id="bottom">
+            <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
+        </div>
     </div>
 </template>
 
@@ -32,11 +35,19 @@ import Avatar from 'primevue/avatar';
 import SelectButton from 'primevue/selectbutton';
 import { ref } from 'vue';
 
-const value = ref(null);
+const value = ref({ name: 'Option 1', value: 1 },);
+const valuebootom = ref({ name: '前端✨', value: 1 });
 const options = ref([
     { name: 'Option 1', value: 1 },
     { name: 'Option 2', value: 2 },
     { name: 'Option 4', value: 3 },
+    { name: 'Option 5', value: 4 },
+    { name: 'Option 6', value: 5 }
+]);
+const optionbootom = ref([
+    { name: '前端✨', value: 1 },
+    { name: '后端', value: 2 },
+    { name: 'nodejs', value: 3 },
     { name: 'Option 5', value: 4 },
     { name: 'Option 6', value: 5 }
 ]);
