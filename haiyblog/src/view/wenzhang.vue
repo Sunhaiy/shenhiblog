@@ -21,6 +21,9 @@
         </div>
         <div id="bottom">
             <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
+            <div id="normalcontiner">
+                <articlesnormal/>
+            </div>
         </div>
     </div>
 </template>
@@ -36,6 +39,7 @@ import Button from 'primevue/button';
 import Avatar from 'primevue/avatar';
 import SelectButton from 'primevue/selectbutton';
 import articles from '@/components/articles.vue';
+import articlesnormal from '@/components/articlesnormal.vue';
 import { ref } from 'vue';
 
 const value = ref({ name: 'Option 1', value: 1 },);
@@ -65,7 +69,7 @@ const optionbootom = ref([
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
     margin-right: 20px;
 }
 
@@ -117,6 +121,13 @@ const optionbootom = ref([
 
 #bottom {
     flex: 1;
-
+    
+    
+}
+#normalcontiner{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
 }
 </style>

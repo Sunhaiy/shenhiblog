@@ -47,8 +47,12 @@ import Chip from 'primevue/chip';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid #1e1e1e;
+    transition: border 0.2s ;
 }
-
+.root:hover{
+    border: 2px solid #60e296;
+}
 #btncontiner {
     width: 100%;
     display: flex;
