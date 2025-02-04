@@ -85,6 +85,7 @@ import Chip from 'primevue/chip';
 #title {
     font-size: 20px;
     font-weight: 400;
+    overflow: hidden;
 }
 
 #fenleicontiner {

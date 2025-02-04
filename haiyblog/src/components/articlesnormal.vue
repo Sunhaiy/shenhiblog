@@ -5,7 +5,7 @@
         </div>
         <div id="bottom">
             <span id="fenlei">技术</span>
-            <span id="title">测试一下标题123</span>
+            <span id="title">如何才能做一个自己的博客</span>
             <span id="time">2025年2月4日</span>
         </div>
     </div>
@@ -30,6 +30,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 2px solid #18181B;
+    transition: border 0.5s;
+}
+#root:hover{
+    border: 2px solid #46dfd3;
 }
 #top{
     overflow: hidden;
@@ -46,5 +51,26 @@
 #bottom{
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    flex: 1;
+    
 }
+#fenlei{
+    color: #a63cfd;
+    font-size: 12px;
+    font-weight: 500;
+    
+    margin-top: 10px;
+}
+ #title{
+    color: #fff;
+    
+ }
+ #time{
+    color: #5c5b5b;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 30px;
+    
+ }
 </style>

@@ -16,14 +16,22 @@
         <div id="center">
             <span id="title">Keep watching</span>
             <div id="artcontiner">
-                <articles/>
+                <articles />
             </div>
         </div>
         <div id="bottom">
             <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
             <div id="normalcontiner">
-                <articlesnormal/>
+                <articlesnormal />
+                
             </div>
+            <Paginator :template="{
+                    '640px': 'PrevPageLink CurrentPageReport NextPageLink',
+                    '960px': 'FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink',
+                    '1300px': 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink',
+                    default: 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink JumpToPageDropdown JumpToPageInput'
+                }" :rows="10" :totalRecords="120" id="pagemaner">
+                </Paginator>
         </div>
     </div>
 </template>
@@ -40,23 +48,24 @@ import Avatar from 'primevue/avatar';
 import SelectButton from 'primevue/selectbutton';
 import articles from '@/components/articles.vue';
 import articlesnormal from '@/components/articlesnormal.vue';
+import Paginator from 'primevue/paginator';
 import { ref } from 'vue';
 
 const value = ref({ name: 'Option 1', value: 1 },);
 const valuebootom = ref({ name: '前端✨', value: 1 });
 const options = ref([
-    { name: 'Option 1', value: 1 },
-    { name: 'Option 2', value: 2 },
-    { name: 'Option 4', value: 3 },
-    { name: 'Option 5', value: 4 },
-    { name: 'Option 6', value: 5 }
+    { name: '精选✨', value: 1 },
+    { name: '科普🐳', value: 2 },
+    { name: '技术😎', value: 3 },
+    { name: '知识🧐', value: 4 },
+    
 ]);
 const optionbootom = ref([
     { name: '前端✨', value: 1 },
     { name: '后端', value: 2 },
     { name: 'nodejs', value: 3 },
-    { name: 'Option 5', value: 4 },
-    { name: 'Option 6', value: 5 }
+    { name: 'css', value: 4 },
+    { name: '网络Iternet', value: 5 }
 ]);
 
 </script>
@@ -69,7 +78,7 @@ const optionbootom = ref([
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
     margin-right: 20px;
 }
 
@@ -93,9 +102,11 @@ const optionbootom = ref([
 #btnright {
     margin-right: 10px;
 }
-#title{
+
+#title {
     align-self: flex-start;
 }
+
 #selectbtn {
     flex: 2;
 }
@@ -107,8 +118,9 @@ const optionbootom = ref([
     flex-direction: column;
     align-items: center;
 }
-#artcontiner{
-    
+
+#artcontiner {
+
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -116,18 +128,24 @@ const optionbootom = ref([
     width: 1350px;
     align-items: center;
     justify-self: center;
-    Flex-flow:row wrap;
+    Flex-flow: row wrap;
 }
 
 #bottom {
     flex: 1;
-    
-    
+
+
 }
-#normalcontiner{
+
+#normalcontiner {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
+
+}
+#pagemaner{
+    margin-top: 20px;
+    
 }
 </style>
