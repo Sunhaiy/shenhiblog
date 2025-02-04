@@ -112,7 +112,7 @@ const optionbootom = ref([
     width: 1350px;
     align-items: center;
     justify-self: center;
-    
+    Flex-flow:row wrap;
 }
 
 #bottom {
