@@ -1,6 +1,8 @@
 <template>
     <div id="root" v-for="item in 10">
-        <div id="top">
+        
+        <a href="#">
+            <div id="top">
             <img id="img" src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="laisheng" ></img>
         </div>
         <div id="bottom">
@@ -8,7 +10,9 @@
             <span id="title">如何才能做一个自己的博客</span>
             <span id="time">2025年2月4日</span>
         </div>
+        </a>
     </div>
+    
 </template>
 
 
@@ -64,7 +68,10 @@
 }
  #title{
     color: #fff;
-    
+    transition: color 0.3s;
+ }
+ #title:hover{
+    color: #46dfd3;
  }
  #time{
     color: #5c5b5b;
@@ -73,4 +80,9 @@
     margin-top: 30px;
     
  }
+ a{
+    text-decoration: none;
+   
+}
+
 </style>

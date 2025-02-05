@@ -1,6 +1,7 @@
 <template>
     <div class="root" v-for="item in 3">
-        <div id="imgcontiner">
+        <a href="#">
+            <div id="imgcontiner">
             <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="Image" id="artimge"/>
         </div>
         <div id="bottom">
@@ -21,6 +22,8 @@
 
             </div>
         </div>
+        </a>
+
     </div>
 
 
@@ -86,6 +89,10 @@ import Chip from 'primevue/chip';
     font-size: 20px;
     font-weight: 400;
     overflow: hidden;
+    transition: color 0.2s ;
+}
+#title:hover{
+    color: #23dfbf;
 }
 
 #fenleicontiner {
@@ -102,5 +109,9 @@ import Chip from 'primevue/chip';
     width: 100%;
     object-fit: cover;
     border-radius: 9px;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
 }
 </style>

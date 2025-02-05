@@ -1,0 +1,81 @@
+<template>
+   
+    <a href="" v-for="item in 20">
+        <div class="root">
+        
+        <div id="imgcontiner">
+            <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" alt="shenhi" id="imgtouxing">
+            
+        </div>
+        <div id="zhuangtai"></div>
+        <span id="name">孫海洋</span>
+    
+    </div>
+    </a>
+</template>
+
+
+
+<script setup>
+
+
+</script>
+
+
+
+<style scoped>
+.root {
+    height: 80px;
+    width: 200px;
+    background-color: rgba(34, 36, 37, 0.667);
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(34, 36, 37, 0.667);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+    
+    transition: border 0.2s ;
+}
+.root:hover{
+    border: 2px solid #e4e4f6;
+}
+#linkitem{
+    margin-left: 20px;
+}
+#name{
+    margin-left: 10px;
+    font-size: large;
+}
+#imgcontiner{
+    margin-left:20px ;
+    overflow: hidden;
+    height: 45px;
+    width: 45px;
+    border-radius: 9px;
+}
+#imgtouxing{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#zhuangtai{
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: -20px;
+    left: -7px;
+    font-size: 12px;
+    background-color: rgba(77, 232, 147);
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 6px rgb(140, 232, 181));
+    
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+</style>
