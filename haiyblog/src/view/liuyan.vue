@@ -4,7 +4,9 @@
             <h2>Cards</h2>
             <span id="untitle">You can make cards using Aura like below 👇</span>
         </div>
-        <div id="center">5</div>
+        <div id="center">
+            <liuyanban />
+        </div>
         <div id="bottom">6</div>
     </div>
 </template>
@@ -12,7 +14,7 @@
 
 
 <script setup>
-
+import liuyanban from '../components/liuyanban.vue'
 
 </script>
 
