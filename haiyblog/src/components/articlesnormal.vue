@@ -29,7 +29,7 @@
     width: 250px;
     height: 250px;
     background-color: #080703;
-background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+    background-image: url("https://www.transparenttextures.com/patterns/tactile-noise-dark.png");
     border-radius: 9px;
     margin: 10px;
     display: flex;

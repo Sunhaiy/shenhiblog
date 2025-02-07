@@ -14,7 +14,7 @@
 
         </div>
         <div id="center">
-            <span id="title">Keep watching</span>
+            <span id="title"></span>
             <div id="artcontiner">
                 <articles />
             </div>

@@ -43,9 +43,11 @@
     margin: 5px;
     filter: drop-shadow(0px 0px 6px #070707);
     transition: filter 0.5s;
+    
 }
 #root:hover{
     filter: drop-shadow(0px 0px 100px #e6d2d2);
+    
 }
 #user{
     width: 200px;

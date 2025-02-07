@@ -1,13 +1,13 @@
 <template>
     <div id="root">
         <div id="top">
-            <h2>Cards</h2>
-            <span id="untitle">You can make cards using Aura like below 👇</span>
+            <h2>竹简✨</h2>
+            <span id="untitle">那就许愿我们共同花费的时间，在彼此心里有相等的价格。</span>
         </div>
         <div id="center">
             <liuyanban />
         </div>
-        <div id="bottom">6</div>
+        <div id="bottom">写留言面板按钮常驻右下角</div>
     </div>
 </template>
 
@@ -27,6 +27,7 @@ import liuyanban from '../components/liuyanban.vue'
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    
 }
 
 #top {

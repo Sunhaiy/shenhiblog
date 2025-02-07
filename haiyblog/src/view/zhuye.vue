@@ -2,7 +2,7 @@
     <div id="root">
         <div id="top">
             <div id="topleft">
-                <span id="title">Overview</span>
+                <span id="title">404 not Found</span>
                 <h2 id="untitle">早上好，孫海洋👋</h2>
             </div>
             <div id="topright">
@@ -83,7 +83,7 @@ import Button from 'primevue/button';
 
 #title {
     font-size: larger;
-    color: #72646B;
+    color: #3f3f46;
 }
 
 #btnright {
