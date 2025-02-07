@@ -22,11 +22,11 @@ import liuyanban from '../components/liuyanban.vue'
 
 <style scoped>
 #root {
-    width: 100%;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #top {
@@ -40,9 +40,11 @@ import liuyanban from '../components/liuyanban.vue'
 }
 
 #center {
-    flex: 1;
+    
     padding-top: 20px;
     display: flex;
+    flex-flow: row wrap;
+    
 }
 
 #bottom {

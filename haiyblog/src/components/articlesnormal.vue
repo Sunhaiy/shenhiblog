@@ -28,7 +28,8 @@
 #root {
     width: 250px;
     height: 250px;
-    background-color: #18181B;
+    background-color: #080703;
+background-image: url("https://www.transparenttextures.com/patterns/wood.png");
     border-radius: 9px;
     margin: 10px;
     display: flex;

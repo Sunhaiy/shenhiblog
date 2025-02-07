@@ -5,12 +5,12 @@
         <img src="./assets/logo.svg" id="imglogo">
       </div>
       <div id="navbtn">
-        <Button label="主页" icon="pi pi-home" class="menubtn" @click="tp('zhuye')"/>
-        <Button label="文章" icon="pi pi-user-edit" class="menubtn" @click="tp('wenzhang')"/>
-        <Button label="留言" icon="pi pi-at" class="menubtn" @click="tp('liuyan')"/>
-        <Button label="来生" icon="pi pi-palette" class="menubtn" @click="tp('laisheng')"/>
-        <Button label="小船" icon="pi pi-link" class="menubtn" @click="tp('xiaochuan')"/>
-        <Button label="我的" icon="pi pi-user" class="menubtn" @click="tp('wode')"/>
+        <Button label="主页" icon="pi pi-home" class="menubtn" @click="tp('zhuye')" />
+        <Button label="文章" icon="pi pi-user-edit" class="menubtn" @click="tp('wenzhang')" />
+        <Button label="留言" icon="pi pi-at" class="menubtn" @click="tp('liuyan')" />
+        <Button label="来生" icon="pi pi-palette" class="menubtn" @click="tp('laisheng')" />
+        <Button label="小船" icon="pi pi-link" class="menubtn" @click="tp('xiaochuan')" />
+        <Button label="我的" icon="pi pi-user" class="menubtn" @click="tp('wode')" />
 
       </div>
       <div class="navinfor">
@@ -35,6 +35,8 @@
   flex-direction: row;
   height: 100vh;
   background-color: #09090B;
+  background-color: #080703;
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
 }
 
 #nav {
@@ -53,14 +55,15 @@
 }
 
 #navbtn {
-  min-width: 200px;;
+  min-width: 200px;
+  ;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .navlogo {
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +72,7 @@
 }
 
 .navinfor {
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +84,8 @@
   display: flex;
   padding: 40px 10px;
 }
-#imglogo{
+
+#imglogo {
   width: 50px;
   height: 50px;
 }
@@ -94,8 +98,8 @@ import Button from 'primevue/button';
 import { RouterView } from "vue-router";
 import { useRouter } from 'vue-router'
 const router = useRouter();
-const tp=(position)=>{
-  router.push({name:position})
+const tp = (position) => {
+  router.push({ name: position })
 }
 
 </script>

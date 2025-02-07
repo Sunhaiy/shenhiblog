@@ -10,7 +10,8 @@
             <div id="fenleicontiner">
                 <Chip label="Apple" icon="pi pi-apple" />
                 <Chip label="Google" icon="pi pi-google" />
-                <Chip label="Microsoft" icon="pi pi-microsoft" removable />
+                <Chip label="haiy" icon="pi pi-user" />
+                
                 
             </div>
             <div id="btncontiner">
