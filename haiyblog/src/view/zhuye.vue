@@ -14,12 +14,46 @@
             </div>
         </div>
         <div id="center">
-            <div id="lunbo">
-                
-                
+            <div id="centerintr">
+                <shenhi/>
+                <shengerbutong/>
             </div>
-            <div id="jishuzhan"></div>
-            <div id="wenzhang"></div>
+            <div class="conteinertextbottom">
+                <span class="bottombigtext"><span class="huo">生而不同</span></span>
+                <span class="bottombigtext">非同凡响</span>
+                <span class="bottombigtext">我有<span class="huo">病</span></span>
+                <span class="bottombigtext">治好了也流口水</span>
+                <span class="bottombigtext"><span class="huo">数据库</span>密码放github</span>
+                <span class="bottombigtext">回忆是两万公里的<span class="huo">海</span></span>
+                <span class="bottombigtext"><span class="huo">自命不凡</span></span>
+                <span class="bottombigtext">转人工</span>
+                <span class="bottombigtext">下划线</span>
+                <span class="bottombigtext"><span class="huo">踏雪寻梅</span></span>
+                <span class="bottombigtext">配音是wo自己唱的</span>
+                
+               <span></span>
+
+            </div>
+            <div class="conteinertextbottom">
+                <span class="bottombigtext">想开一手公司试试</span>
+                <span class="bottombigtext"><span class="huo2">生活</span>把我基倒躺着<span class="huo2">确实比站着舒服</span></span>
+                <span class="bottombigtext">让软件再次伟大</span>
+                <span class="bottombigtext"><span class="huo2">驯服blender</span></span>
+                <span class="bottombigtext">好景难遇</span>
+                <span class="bottombigtext"> <span class="huo2">忧郁</span></span>
+                <span class="bottombigtext">比较是偷走幸福的小偷</span>
+                <span class="bottombigtext"><span class="huo2">CYBERPUNK2077好玩</span></span>
+                <span class="huo2"></span>
+                
+               <span></span>
+
+            </div>
+            
+            
+            
+                
+            
+            
         </div>
         <div id="bottom"></div>
     </div>
@@ -28,8 +62,8 @@
 
 
 <script setup>
-
-
+import shengerbutong from '../components/shengerbutong.vue'
+import shenhi from '../components/shenhi.vue'
 import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
@@ -40,18 +74,20 @@ import Button from 'primevue/button';
 
 <style scoped>
 #root {
-    margin-right: 20px;
-    width: 100%;
+    
     height: 100%;
+    width: 100%;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    min-width: 600px;
+    
 }
 
 #top {
     flex: 1;
     display: flex;
-
+    
 }
 
 #center {
@@ -88,28 +124,29 @@ import Button from 'primevue/button';
 
 #btnright {
     margin-left: 10px;
-    
+    margin-right: 10px;
 }
-
-#lunbo {
-    flex: 3;
+#centerintr{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border:1px solid #72646B;
-    border-radius: 10px;
+    flex-direction: row;
 }
-
-#jishuzhan {
-    flex:1;
+.conteinertextbottom{
+    margin-top: 2px;
+    height: 30px;
+    overflow: hidden;
 }
-
-#wenzhang {
-    flex: 2;
+.bottombigtext{
+    
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
 }
-#wenzhang,#jishuzhan{
-    border:1px solid #72646B;
-    border-radius: 10px;
-    margin-top: 20px;
+.huo{
+    color: rgb(4, 205, 255);
+    background-color: rgb(255, 255, 255);
+}
+.huo2{
+    color: rgb(27, 247, 218);
+    background-color: rgb(255, 255, 255);
 }
 </style>
