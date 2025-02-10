@@ -48,7 +48,11 @@
                <span></span>
 
             </div>
-            
+            <div id="botomcontinercenten">
+                <Linksandprofile/>
+                <eazyartcles/>
+                
+            </div>
             
             
                 
@@ -62,7 +66,9 @@
 
 
 <script setup>
+import eazyartcles from '../components/eazyartcles.vue'
 import shengerbutong from '../components/shengerbutong.vue'
+import Linksandprofile from '../components/linksandprofile.vue'
 import shenhi from '../components/shenhi.vue'
 import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
@@ -131,7 +137,7 @@ import Button from 'primevue/button';
     flex-direction: row;
 }
 .conteinertextbottom{
-    margin-top: 2px;
+    margin-top: 4px;
     height: 30px;
     overflow: hidden;
 }
@@ -148,5 +154,8 @@ import Button from 'primevue/button';
 .huo2{
     color: rgb(27, 247, 218);
     background-color: rgb(255, 255, 255);
+}
+#botomcontinercenten{
+    display: flex;
 }
 </style>

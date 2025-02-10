@@ -33,6 +33,7 @@
 #huo{
     color: rgb(255, 166, 0);
     background-color: rgb(255, 255, 255);
+    
 }
 
 </style>

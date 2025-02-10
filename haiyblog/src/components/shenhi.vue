@@ -32,7 +32,7 @@
     border: 2px solid #ececec;
     background: linear-gradient(to top right, rgb(255, 103, 1),rgba(3, 255, 205, 0.8), rgb(255, 0, 238));
     background-size: 400%;
-    animation: shenhi 10s infinite;
+    animation: shenhi 5s infinite;
     filter: drop-shadow(0px 0px 10px rgba(238, 224, 224, 0.5));
     transition: filter 0.5s;
     display: flex;
