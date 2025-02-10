@@ -1,6 +1,8 @@
 <template>
 <div id="root5">
     <div id="left">
+        
+        
         <div id="gundong">
             <span class="ch1">SUN</span>
             <span class="ch2">HAI</span>
@@ -9,13 +11,18 @@
             
         </div>
     </div>
-    <div id="right"></div>
+    <div id="right">
+        <liuyanban/>
+        
+    </div>
 </div>
 </template>
 
 
 
 <script setup>
+import liuyanban from './liuyanban.vue';
+
 
 
 </script>
@@ -44,7 +51,7 @@
     height: 80px;
     width: 500px;
     background-color: #0bffda;
-    overflow: hidden;
+    
     background-clip: border-box;
     align-items: center;
     transform: rotate(90deg);
@@ -81,7 +88,11 @@
 }
 #right{
     flex: 1;
+    display: flex;
+    padding: 10px;
+    
 }
+
 @keyframes ch1 {
     from {
         transform: translateX(0);
@@ -98,5 +109,9 @@
         transform: translateX(-110%);
     }
 }
-
+.tongji{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+}
 </style>

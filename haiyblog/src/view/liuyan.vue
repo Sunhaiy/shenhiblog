@@ -5,7 +5,7 @@
             <span id="untitle">那就许愿我们共同花费的时间，在彼此心里有相等的价格。</span>
         </div>
         <div id="center">
-            <liuyanban />
+            <liuyanban v-for="item in 20"/>
         </div>
         <div id="bottom">写留言面板按钮常驻右下角</div>
     </div>

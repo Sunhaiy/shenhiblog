@@ -1,5 +1,5 @@
 <template>
-    <div id="root" v-for="item in 12">
+    <div id="root" v-for="item in 1">
         <div id="user">
             
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" alt="" id="tupian">
