@@ -1,5 +1,6 @@
-const connection = require('../sql')
-
-function getArticles(params) {
-    const query = `SELECT * FROM  WHERE id = ${params.id}`
-}
+const express =require('express');
+const artrouter = express.Router();
+artrouter.get('/articles',(req,res)=>{
+    res.end('articles');
+});
+module.exports = artrouter;
