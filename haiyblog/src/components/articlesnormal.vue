@@ -1,5 +1,5 @@
 <template>
-    <div id="root" v-for="item in 10">
+    <div id="root" v-for="item in list" :key="item.id">
         
         <a href="#">
             <div id="top">
@@ -7,8 +7,8 @@
         </div>
         <div id="bottom">
             <span id="fenlei">技术</span>
-            <span id="title">如何才能做一个自己的博客</span>
-            <span id="time">2025年2月4日</span>
+            <span id="title">{{item.title}}</span>
+            <span id="time">{{item.created_at}}</span>
         </div>
         </a>
     </div>
@@ -18,7 +18,7 @@
 
 
 <script setup>
-
+const props = defineProps(['list']);
 
 </script>
 

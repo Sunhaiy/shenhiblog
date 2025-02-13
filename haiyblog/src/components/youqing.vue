@@ -1,14 +1,14 @@
-<template>
+<template >
    
-    <a href="" v-for="item in 20">
+    <a :href="'https://'+item.weburl" v-for="item in props.list" key="{{item.mingcheng}}" target="_blank">
         <div class="root">
         
         <div id="imgcontiner">
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" alt="shenhi" id="imgtouxing">
             
         </div>
-        <div id="zhuangtai"></div>
-        <span id="name">孫海洋</span>
+        <div id="zhuangtai" ></div>
+        <span id="name">{{ item.mingcheng }}</span>
     
     </div>
     </a>
@@ -17,8 +17,8 @@
 
 
 <script setup>
-
-
+import {defineProps} from 'vue'
+const props = defineProps(['list'])
 </script>
 
 
@@ -47,7 +47,9 @@
 }
 #name{
     margin-left: 10px;
+    margin-right: 10px;
     font-size: large;
+    font-weight: bold;
 }
 #imgcontiner{
     margin-left:20px ;

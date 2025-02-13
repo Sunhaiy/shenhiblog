@@ -9,7 +9,7 @@
         <div id="center">
 
 
-            <Youqing />
+            <Youqing :list="list"/>
         </div>
 
         <div id="bottom">
@@ -65,12 +65,20 @@
 import Youqing from '../components/youqing.vue'
 import { ref } from 'vue'
 import Button from 'primevue/button';
-
+import axios from 'axios';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
 
 const visible = ref(false);
 const value = ref(null);
+const list = ref([])
+async function getxiaochuan() {
+    console.log('发送请求')
+    const x =await axios.get('http://127.0.0.1:2005/xiaochuan')
+    console.log(x.data)
+    list.value = x.data
+}
+getxiaochuan()
 </script>
 
 

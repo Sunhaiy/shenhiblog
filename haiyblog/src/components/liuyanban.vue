@@ -1,21 +1,21 @@
 <template>
-    <div id="root" v-for="item in 1">
+    <div id="root" v-for="item in list" key="{{item.id}}">
         <div id="user">
             
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" alt="" id="tupian">
             
             <div id="name_email">
                 
-                <span id="name">孫海洋</span>
-                <span class="hui" id="mail">s744129991@gmail.com</span>
+                <span id="name">{{item.mingzi}}</span>
+                <span class="hui" id="mail">{{ item.email }}</span>
                 <div id="zhuangtai"></div>
             </div>
         </div>
         <div id="follo">
-            <span id="zishu">1320<span class="hui"> 字符</span></span>
-            <span id="signtime">2025/2/7<span class="hui"> 日期</span></span>
+            <span id="zishu">{{item.liuyan.length}}<span class="hui"> 字符</span></span>
+            <span id="signtime">{{item.timer}}<span class="hui"> 日期</span></span>
         </div>
-        <div id="inner" class="hui">一句话也说不出来，因为你空间的美丽，还有对我的关怀，让我感动，让我思念，只有一句祝福，朋友幸福永远.</div>
+        <div id="inner" class="hui">{{ item.liuyan }}</div>
         <div id="bottom">没想好</div>
     </div>
 
@@ -24,7 +24,7 @@
 
 
 <script setup>
-
+const props =defineProps(['list'])
 </script>
 
 

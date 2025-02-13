@@ -22,7 +22,7 @@
         <div id="bottom">
             <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
             <div id="normalcontiner">
-                <articlesnormal />
+                <articlesnormal :list="data2"/>
                 
             </div>
             <Paginator :template="{
@@ -50,7 +50,7 @@ import articles from '@/components/articles.vue';
 import articlesnormal from '@/components/articlesnormal.vue';
 import Paginator from 'primevue/paginator';
 import { ref } from 'vue';
-
+import axios from 'axios';
 const value = ref({ name: 'Option 1', value: 1 },);
 const valuebootom = ref({ name: '前端✨', value: 1 });
 const options = ref([
@@ -67,7 +67,13 @@ const optionbootom = ref([
     { name: 'css', value: 4 },
     { name: '网络Iternet', value: 5 }
 ]);
-
+const data2 = ref([]);
+async function getartciles(){
+    const art = await axios.get('http://127.0.0.1:2005/articles')
+    console.log(art.data)
+    data2.value = art.data
+}
+getartciles()
 </script>
 
 
