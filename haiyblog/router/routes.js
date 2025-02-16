@@ -6,7 +6,7 @@ import wode from "@/view/wode.vue";
 import wenzhang from "@/view/wenzhang.vue";
 import liuyan from "@/view/liuyan.vue";
 import laisheng from "@/view/laisheng.vue";
-
+import article from "@/view/artdeteil.vue";
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -41,6 +41,11 @@ const router = createRouter(
                 path:"/laisheng",
                 name:"laisheng",
                 component:laisheng
+            },
+            {
+                path:"/article/:id",
+                name:"article",
+                component:article
             }
             
         ]

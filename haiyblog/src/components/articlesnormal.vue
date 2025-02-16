@@ -1,7 +1,7 @@
 <template>
-    <div id="root" v-for="item in list" :key="item.id">
+    <div id="root" v-for="item in list" :key="item.id" @click="toDetail(item.id)">
         
-        <a href="#">
+        
             <div id="top">
             <img id="img" src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="laisheng" ></img>
         </div>
@@ -10,7 +10,7 @@
             <span id="title">{{item.title}}</span>
             <span id="time">{{item.created_at}}</span>
         </div>
-        </a>
+        
     </div>
     
 </template>
@@ -18,8 +18,15 @@
 
 
 <script setup>
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 const props = defineProps(['list']);
-
+const router = useRouter();
+function toDetail(id){
+    
+    console.log(id);
+    router.push({name: 'article', params: {id: id}});
+}
 </script>
 
 
