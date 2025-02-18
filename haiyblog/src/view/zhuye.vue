@@ -83,7 +83,7 @@ import Button from 'primevue/button';
     
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    
     display: flex;
     flex-direction: column;
     min-width: 600px;

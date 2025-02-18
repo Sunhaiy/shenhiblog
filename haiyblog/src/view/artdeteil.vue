@@ -27,17 +27,19 @@ import Artdeteilclass from '@/components/artdeteilclass.vue';
     flex-direction: row;
     overflow-y: scroll;
     
+    
 }
 #top{
     flex: 1;
-    background-color: sandybrown;
+   
 }
 #center{
-    flex: 4;
+    flex: 3;
     display: flex;
+    padding-right: 40px;
 }
 #bottom{
     flex: 1;
-    background-color: sandybrown;
+   
 }
 </style>
