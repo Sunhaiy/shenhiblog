@@ -117,7 +117,7 @@ import Pinglun from './pinglun.vue';
 #top {
     border-radius: 20px 20px 0px 0px;
     height: 200px;
-    background-color: rgb(239, 234, 234);
+    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -140,6 +140,6 @@ import Pinglun from './pinglun.vue';
     flex-direction: column;
     padding: 40px;
     background-color: rgb(42, 41, 41);
-
+    color: antiquewhite;
 }
 </style>

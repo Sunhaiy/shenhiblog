@@ -1,6 +1,10 @@
 <template>
     <div id="root">
-        <div id="top">10</div>
+        <div id="top">
+            <button id="tui" >
+               离开
+            </button>
+        </div>
         <div id="center">
             <Artdeteilclass/>
         </div>
@@ -31,8 +35,25 @@ import Artdeteilclass from '@/components/artdeteilclass.vue';
 }
 #top{
     flex: 1;
+    display: flex;
+    flex-direction: column;
    
 }
+#tui{
+    position: sticky;
+    top: 20px;
+    margin-top: 60px;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    align-self: center;
+    background-color: antiquewhite;
+    overflow: hidden;
+    color: #2A2929;
+    font-weight: bolder;
+}
+
 #center{
     flex: 3;
     display: flex;
