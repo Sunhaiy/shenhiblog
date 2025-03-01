@@ -6,7 +6,7 @@
             </button>
         </div>
         <div id="center">
-            <Artdeteilclass/>
+            <Artdeteilclass :artid="id"/>
         </div>
         <div id="bottom">12</div>
     </div>
@@ -17,6 +17,9 @@
 <script setup>
 import Artdeteilclass from '@/components/artdeteilclass.vue';
 
+import { useRoute } from 'vue-router';
+const route =useRoute();
+const {id} = route.params;
 
 
 </script>

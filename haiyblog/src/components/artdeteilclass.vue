@@ -1,91 +1,12 @@
 <template>
-    <div id="root2">
+    <div id="root2" v-if="wenzhang">
         <div id="top">
-            <h1 id="titleart">基于 MIME 类型的服务端推送</h1>
-            <span id="timer">2025/2/17</span>
+            <h1 id="titleart" >{{wenzhang.title}}</h1>
+            <span id="timer" >P{{ wenzhang.created_at }}</span>
 
         </div>
-        <div id="center2">
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
-            <h1>multipart</h1>
-            <span>MIME 类型由类型和子类型组成：Content-Type: [type]/[subType]，前者是数据大类别，后者是具体的种类。
-
-                multipart 用于连接消息体的多个部分构成一个消息，这些部分可以是不同类型的数据。也就是一个消息可以包含多个消息体。
-
-                我们常见的一般是表单相关的 multipart/form-data，当我们需要在提交表单时上传文件，就需要设置这个类型。
-                电子邮件中使用的类型是 multipart/alternative，包含纯文本（text/plain）和 HTML（text/html）两种数据。
-                其他相关的可以看看 维基百科 MIME#Content-Type
-
-                x-mixed-replace</span>
+        <div id="center2" v-html="wenzhang.content">
+            
         </div>
         <div id="bottom">
             <Pinglun/>
@@ -96,9 +17,27 @@
 
 
 <script setup>
+import { ref } from 'vue';
 import Pinglun from './pinglun.vue';
+import axios from 'axios';
+const wenzhang =ref();
 
 
+const props = defineProps({
+    artid: {
+        type: Number,
+        
+    },
+});
+console.log(props.artid);
+async function getcontent() {
+    
+   const data = await axios.get(`http://127.0.0.1:2005/articles/${props.artid}`)
+   console.log(data.data);
+   wenzhang.value =data.data[0]
+   console.log(wenzhang.value);
+}
+getcontent()
 </script>
 
 

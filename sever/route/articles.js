@@ -18,7 +18,16 @@ artrouter.get('/articles',(req,res)=>{
     
 
 });
-
+artrouter.get('/articles/:id',(req,res)=>{
+    const querysql =`SELECT * FROM articles WHERE id = ${req.params.id}`
+    connection.query(querysql,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json(results);
+        }
+    })
+});
 
 
 module.exports = artrouter;

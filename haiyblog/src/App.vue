@@ -34,9 +34,9 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
-  background-color: #09090B;
-  background-color: #080703;
-  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  background-color: #161616;
+  
+  
 }
 
 #nav {
