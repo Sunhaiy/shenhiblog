@@ -1,14 +1,22 @@
 <template>
     <div id="root">
         <div id="top">
-            <button id="tui" >
+            <button id="tui" @click="$router.go(-1)">
                离开
             </button>
         </div>
         <div id="center">
             <Artdeteilclass :artid="id"/>
         </div>
-        <div id="bottom">12</div>
+        <div id="bottom">
+            <div id="rightliebiao">
+                <span>文章目录</span>
+                <a href="">域名解析</a>
+                <a href="">域名解析</a>
+                <a href="">域名解析</a>
+                <a href="">域名解析</a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -55,8 +63,12 @@ const {id} = route.params;
     overflow: hidden;
     color: #2A2929;
     font-weight: bolder;
+    transition: all 0.5s;
 }
-
+#tui:hover{
+    background-color: #2A2929;
+    color: antiquewhite;
+}
 #center{
     flex: 3;
     display: flex;
@@ -64,6 +76,31 @@ const {id} = route.params;
 }
 #bottom{
     flex: 1;
-   
+    display: flex;
+    flex-direction: column;
+    
+}
+#rightliebiao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    margin-right: 20px;
+    position: sticky;
+    top: 20px;
+    color: #2A2929;
+    font-weight: bolder;
+    transition: all 0.5s;
+}
+#rightliebiao:hover{
+    background-color: #2A2929;
+    color: antiquewhite;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    color: inherit;
 }
 </style>

@@ -1,15 +1,13 @@
 <template>
     <div id="root">
-        <div id="top">1</div>
-        <div id="center">2</div>
-        <div id="bottom">3</div>
+        <card/>
     </div>
     </template>
     
     
     
     <script setup>
-    
+    import card from '../components/card.vue';
     
     </script>
     
@@ -21,16 +19,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-y: scroll;
     }
-    #top{
-        flex: 1;
-    }
-    #center{
-        flex: 1;
-    }
-    #bottom{
-        flex: 1;
-        
-    }
+    
     </style>
