@@ -6,6 +6,7 @@
         <div id="right">
             <head id="rhhea">
                 <h1>无题</h1>
+                <hr>
             </head>
             <div id="content">
             </div>
@@ -52,5 +53,9 @@
     #rhhea{
         display: flex;
         flex-direction: row;
+    }
+    hr{
+        width: 100%;
+        border: 1px solid #b3acac;
     }
     </style>

@@ -16,7 +16,7 @@
             <span id="signtime">{{item.timer}}<span class="hui"> 日期</span></span>
         </div>
         <div id="inner" class="hui">{{ item.liuyan }}</div>
-        <div id="bottom">没想好</div>
+        <div id="bottom">※海洋</div>
     </div>
 
 </template>
@@ -36,8 +36,8 @@ const props =defineProps(['list'])
     border: 1px solid #3f3f46;
     border-radius: 10px;
     padding: 20px;
-    background-color: #000000;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+    background-color: #131313;
+    
     height: auto;
     width: 400px;
     margin: 5px;
@@ -80,7 +80,7 @@ const props =defineProps(['list'])
 #inner {
     text-indent: 2em;
     margin-bottom: 10px;
-    
+    flex: 1;
 }
 #follo{
     margin-top: 10px;

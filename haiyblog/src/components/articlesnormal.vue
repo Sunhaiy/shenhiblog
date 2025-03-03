@@ -35,14 +35,14 @@ function toDetail(id){
 #root {
     width: 250px;
     height: 250px;
-    background-color: #080703;
-    background-image: url("https://www.transparenttextures.com/patterns/tactile-noise-dark.png");
+    background-color: #171717;
+    
     border-radius: 9px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 2px solid #18181B;
+    border: 2px solid #26262b;
     transition: border 0.5s;
 }
 #root:hover{
@@ -77,6 +77,9 @@ function toDetail(id){
  #title{
     color: #fff;
     transition: color 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
  }
  #title:hover{
     color: #46dfd3;

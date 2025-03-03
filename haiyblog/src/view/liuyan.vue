@@ -7,13 +7,16 @@
         <div id="center">
             <liuyanban :list="data"/>
         </div>
-        <div id="bottom">写留言面板按钮常驻右下角</div>
+        <div id="bottom"></div>
+        <Button label="Search" icon="pi pi-search" iconPos="top" id="changzhu"/>
+        
     </div>
 </template>
 
 
 
 <script setup>
+import Button from 'primevue/button';
 import { ref } from 'vue';
 import liuyanban from '../components/liuyanban.vue'
 import axios from 'axios';
@@ -30,6 +33,7 @@ getliuyan()
 
 <style scoped>
 #root {
+    position: relative;
     height: 100%;
     width: 100%;
     display: flex;
@@ -59,5 +63,14 @@ getliuyan()
 #bottom {
     flex: 1;
 
+}
+#changzhu{
+    height: 50px;
+    border-radius: 5px;
+    border: 0px;
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    font-weight: bold;
 }
 </style>
