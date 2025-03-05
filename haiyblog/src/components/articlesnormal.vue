@@ -36,7 +36,7 @@ function toDetail(id){
     width: 250px;
     height: 250px;
     background-color: #171717;
-    
+    font-weight: 600;
     border-radius: 9px;
     margin: 10px;
     display: flex;
@@ -70,7 +70,7 @@ function toDetail(id){
 #fenlei{
     color: #a63cfd;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     
     margin-top: 10px;
 }

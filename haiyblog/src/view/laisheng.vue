@@ -60,6 +60,7 @@ getdiary()
 }
 
 #content {
+    font-weight: bold;
     padding: 20px;
     flex: 1;
 }
@@ -76,13 +77,17 @@ hr {
 }
 
 #weathernow {
+    font-weight: bold;
     align-self: center;
-}
-
-#titlenow {
     background: linear-gradient(to right, #03eaa5, #06ca54);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: identifier 5s;
+}
+
+#titlenow {
+    background: linear-gradient(to right, #ababab, #efefe8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 </style>

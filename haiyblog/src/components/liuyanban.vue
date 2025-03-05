@@ -37,7 +37,7 @@ const props =defineProps(['list'])
     border-radius: 10px;
     padding: 20px;
     background-color: #131313;
-    
+    font-weight: 600;
     height: auto;
     width: 400px;
     margin: 5px;

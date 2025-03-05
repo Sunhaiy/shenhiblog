@@ -1,5 +1,5 @@
 <template >
-    <div id="card" v-for="i in info" v-if="info">
+    <div id="card" v-for="i in info" key="{{i.id}}" v-if="info" @click="tiaozhuan(i.id)">
         <div id="heard">
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png" alt="" id="awatar">
 
@@ -7,10 +7,10 @@
         </div>
         <hr id="line">
         <div id="inner">
-            这是正文
+            {{ i.title }}
         </div>
-        <span id="time">2025/3/2</span>
-        <span id="weather">🌨下雪天</span>
+        <span id="time">{{ i.time }}</span>
+        <span id="weather">{{i.weacher}}</span>
     </div>
 </template>
 
@@ -19,7 +19,10 @@
 <script setup>
 const props =defineProps(['info'])
 console.log();
-
+function tiaozhuan(id){
+    console.log(id)
+    
+}
 </script>
 
 
