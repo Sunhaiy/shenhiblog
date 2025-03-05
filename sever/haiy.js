@@ -1,16 +1,17 @@
 const express = require('express')
-const cors = require('cors') // 引入cors中间件
+const cors = require('cors') 
 const zhuye = require('./route/zhuye')
 const liuyan = require('./route/liuyan')
 const articles = require('./route/articles')
 const xiaochuan = require('./route/xiaochuan')
+const laisheng = require('./route/laisheng')
 const db = require('./sql.js')
 const app = express()
 const port = 2005;
 
 db.connect()
 app.use(cors()) // 使用cors中间件
-app.use(zhuye).use(liuyan).use(articles).use(xiaochuan)
+app.use(zhuye).use(liuyan).use(articles).use(xiaochuan).use(laisheng)
 app.get('/', (req, res) => {
     res.end('haiy')
 })

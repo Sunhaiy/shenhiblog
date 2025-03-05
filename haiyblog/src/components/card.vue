@@ -1,5 +1,5 @@
-<template>
-    <div id="card" v-for="i in 10">
+<template >
+    <div id="card" v-for="i in info" v-if="info">
         <div id="heard">
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png" alt="" id="awatar">
 
@@ -17,7 +17,8 @@
 
 
 <script setup>
-
+const props =defineProps(['info'])
+console.log();
 
 </script>
 
@@ -81,7 +82,7 @@
     padding-top: 2px;
     padding-bottom:10px ;
     font-size: 15px;
-    color: #b3b3b3;
+    color: #17ea92;
     align-self: flex-end;
     justify-content: end;
     margin-right: 10px;
