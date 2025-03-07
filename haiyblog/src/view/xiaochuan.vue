@@ -93,7 +93,7 @@ function postdata() {
     visible.value = false
     console.log(formdata.value);
     if (!formdata.value.name || !formdata.value.link || !formdata.value.icon || !formdata.value.intronduce) {
-        toast.add({ severity: 'error', summary: '提交失败', detail: '请填写完整信息', life: 5000 });
+        toast.add({ severity: 'error', summary: '提交失败', detail: '海洋提醒你：填写完整信息', life: 5000 });
         visible.value = true
         return
     }
