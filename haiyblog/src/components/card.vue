@@ -1,5 +1,5 @@
 <template >
-    <div id="card" v-for="i in info" key="{{i.id}}" v-if="info" @click="tiaozhuan(i.id)">
+    <div id="card" v-for="i in info" key="{{i.id}}" v-if="info" @click="getid(i.id)">
         <div id="heard">
             <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png" alt="" id="awatar">
 
@@ -17,12 +17,9 @@
 
 
 <script setup>
-const props =defineProps(['info'])
+const props =defineProps(['info','getid']);
 console.log();
-function tiaozhuan(id){
-    console.log(id)
-    
-}
+
 </script>
 
 

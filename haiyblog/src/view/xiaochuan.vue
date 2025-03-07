@@ -34,23 +34,23 @@
                     
                     <div class="form">
                         <label >名称：</label>
-                        <InputText id="username"  placeholder="如:“雨落青丝”"/>
+                        <InputText id="username" v-model="formdata.name" placeholder="如:“雨落青丝”" severity="error"/>
                     </div>
                     <div class="form">
                         <label >链接：</label>
-                        <InputText  placeholder="如:“baidu.com”"/>
+                        <InputText  placeholder="如:“baidu.com”" v-model="formdata.link"/>
                     </div>
                     <div class="form">
                         <label >图标：</label>
-                        <InputText  placeholder="如:“https://xxx.jpg”"/>
+                        <InputText  placeholder="如:“https://xxx.jpg”" v-model="formdata.icon"/>
                     </div>
                     <div class="form">
                         <label >简介：</label>
-                        <InputText  placeholder="如:“一个生活小站”"/>
+                        <InputText  placeholder="如:“一个生活小站”" v-model="formdata.intronduce"/>
                     </div>
                     <div >
                         <Button type="button" label="取消" severity="secondary" @click="visible = false"></Button>
-                        <Button type="button" label="发送申请" @click="visible = false" id="formbtn"></Button>
+                        <Button type="button" label="发送申请" @click="postdata" id="formbtn"></Button>
                     </div>
                 </div>
 
@@ -72,6 +72,12 @@ import InputText from 'primevue/inputtext';
 const visible = ref(false);
 const value = ref(null);
 const list = ref([])
+const formdata =ref({
+    name:'',
+    link:'',
+    icon:'',
+    intronduce:''
+})
 async function getxiaochuan() {
     console.log('发送请求')
     const x =await axios.get('http://127.0.0.1:2005/xiaochuan')
@@ -79,6 +85,10 @@ async function getxiaochuan() {
     list.value = x.data
 }
 getxiaochuan()
+function postdata() {
+    visible.value = false
+
+}
 </script>
 
 
