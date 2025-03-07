@@ -1,5 +1,7 @@
 <template>
+    <Toast />
     <div id="root">
+        
         <div id="top">
             <h2>
                 小船🥰
@@ -34,7 +36,7 @@
                     
                     <div class="form">
                         <label >名称：</label>
-                        <InputText id="username" v-model="formdata.name" placeholder="如:“雨落青丝”" severity="error"/>
+                        <InputText id="username" v-model="formdata.name" placeholder="如:“雨落青丝”" />
                     </div>
                     <div class="form">
                         <label >链接：</label>
@@ -50,7 +52,7 @@
                     </div>
                     <div >
                         <Button type="button" label="取消" severity="secondary" @click="visible = false"></Button>
-                        <Button type="button" label="发送申请" @click="postdata" id="formbtn"></Button>
+                        <Button type="button" label="发送申请" @click="postdata()" id="formbtn"></Button>
                     </div>
                 </div>
 
@@ -68,9 +70,11 @@ import Button from 'primevue/button';
 import axios from 'axios';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
-
+import { Toast } from 'primevue';
+import { useToast } from "primevue/usetoast";
+const toast = useToast();
 const visible = ref(false);
-const value = ref(null);
+
 const list = ref([])
 const formdata =ref({
     name:'',
@@ -87,8 +91,16 @@ async function getxiaochuan() {
 getxiaochuan()
 function postdata() {
     visible.value = false
-
+    console.log(formdata.value);
+    if (!formdata.value.name || !formdata.value.link || !formdata.value.icon || !formdata.value.intronduce) {
+        toast.add({ severity: 'error', summary: '提交失败', detail: '请填写完整信息', life: 5000 });
+        visible.value = true
+        return
+    }
+    axios.post('http://127.0.0.1:2005/xiaochuan/postlink',formdata.value)
+    toast.add({ severity: 'success', summary: '提交成功', detail: '海洋已经收到你的申请啦！', life: 5000 });
 }
+
 </script>
 
 
