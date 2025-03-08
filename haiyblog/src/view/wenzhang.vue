@@ -22,13 +22,7 @@
                 <articlesnormal :list="data2"/>
                 
             </div>
-            <Paginator :template="{
-                    '640px': 'PrevPageLink CurrentPageReport NextPageLink',
-                    '960px': 'FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink',
-                    '1300px': 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink',
-                    default: 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink JumpToPageDropdown JumpToPageInput'
-                }" :rows="10" :totalRecords="120" id="pagemaner">
-                </Paginator>
+           
         </div>
     </div>
 </template>
@@ -45,7 +39,7 @@ import Avatar from 'primevue/avatar';
 import SelectButton from 'primevue/selectbutton';
 import articles from '@/components/articles.vue';
 import articlesnormal from '@/components/articlesnormal.vue';
-import Paginator from 'primevue/paginator';
+
 import { ref } from 'vue';
 import axios from 'axios';
 const value = ref({ name: 'Option 1', value: 1 },);
@@ -147,8 +141,5 @@ getartciles()
     flex-flow: row wrap;
 
 }
-#pagemaner{
-    margin-top: 20px;
-    
-}
+
 </style>
