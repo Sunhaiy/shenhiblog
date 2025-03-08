@@ -56,10 +56,19 @@ const count =ref({
     flex-direction: column;
 }
 
+
 .userprofile {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 15px;
+    border: 1px solid #4e4d4d;
+    padding: 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.userprofile:hover,.userprofile2:hover{
+    border: 1px solid #696868;
+    background-color: rgb(46, 46, 46);
 }
 .userprofile2 {
     display: flex;

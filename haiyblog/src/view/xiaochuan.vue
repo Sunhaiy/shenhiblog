@@ -30,7 +30,7 @@
 
 
 
-            <Button label="入幕之宾 ✨" @click="visible = true" id="tijiao"/>
+            <Button label="申请友链 ✨" @click="visible = true" id="tijiao"/>
             <Dialog v-model:visible="visible" modal header="友链申请" :style="{ width: '25rem' }">
                 <div id="dialog">
                     
@@ -57,6 +57,9 @@
                 </div>
 
             </Dialog>
+            <div id="pinglun">
+                <pinglun/>
+            </div>
         </div>
     </div>
 </template>
@@ -72,6 +75,7 @@ import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
 import { Toast } from 'primevue';
 import { useToast } from "primevue/usetoast";
+import pinglun from '../components/pinglun.vue'
 const toast = useToast();
 const visible = ref(false);
 
@@ -93,12 +97,12 @@ function postdata() {
     visible.value = false
     console.log(formdata.value);
     if (!formdata.value.name || !formdata.value.link || !formdata.value.icon || !formdata.value.intronduce) {
-        toast.add({ severity: 'error', summary: '提交失败', detail: '海洋提醒你：填写完整信息', life: 5000 });
+        toast.add({ severity: 'error', summary: '提交失败', detail: '海洋提醒你：填写完整信息!🐳', life: 5000 });
         visible.value = true
         return
     }
     axios.post('http://127.0.0.1:2005/xiaochuan/postlink',formdata.value)
-    toast.add({ severity: 'success', summary: '提交成功', detail: '海洋已经收到你的申请啦！', life: 5000 });
+    toast.add({ severity: 'success', summary: '提交成功', detail: '海洋已经收到你的申请啦！🥰', life: 5000 });
 }
 
 </script>
@@ -190,6 +194,17 @@ function postdata() {
 #tijiao{
     margin: auto;
     margin-top: 40px;
-    width: 400px;
+    width: 100px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    
+}
+#pinglun{
+    max-width: 1000px;
+    min-width: 600px;
+    align-self: center;
+    margin-top: 60px;
+    border-radius: 9px;
 }
 </style>

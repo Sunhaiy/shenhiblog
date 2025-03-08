@@ -13,10 +13,15 @@ xiaochuanrouter.get('/xiaochuan',(req,res)=>{
     })
 });
 xiaochuanrouter.post('/xiaochuan/postlink',(req,res)=>{
-    const name = req.body.name;
-    const link = req.body.link;
-    const imageLink = req.body.imageLink;
-    const description = req.body.description;
-    const quersql =`INSERT INTO link (mingcheng,weburl,jianjie,linkicon) VALUES ('${name}','${link}','${description}','${imageLink}')`
+    console.log(req.body);
+    const {name,link,icon,intronduce} = req.body;
+    const insertsql =`INSERT INTO link (mingcheng,weburl,jianjie,linkicon) VALUES ('${name}','${link}','${icon}','${intronduce}')`
+    connection.query(insertsql,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json({code:1,msg:'添加成功'});
+        }
+    })
 })
 module.exports = xiaochuanrouter;

@@ -10,7 +10,7 @@ const app = express()
 const port = 2005;
 
 db.connect()
-app.use(cors()) // 使用cors中间件
+app.use(cors()).use(express.json()).use(express.urlencoded({ extended: true }))
 app.use(zhuye).use(liuyan).use(articles).use(xiaochuan).use(laisheng)
 app.get('/', (req, res) => {
     res.end('haiy')
