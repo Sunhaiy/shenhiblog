@@ -16,7 +16,16 @@
                 <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="" id="img"></img>
             </div>
         </div>
-        <div class="rightcard"></div>
+        <div class="rightcard">
+            <div id="imgnor">
+                <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="" id="imgnor">
+            </div>
+            <div id="bottom">
+                <span id="heading">Head</span>
+                <span id="introduce">这里是这篇文章一条简短的简介这里是这篇文章一条简短的简介这里是这篇文章一条简短的简介</span>
+                <button id="jinrubtn2">春和景明</button>
+            </div>
+        </div>
 
     </div>
 
@@ -57,6 +66,7 @@
 
 .rightcard {
     display: flex;
+    flex-direction: column;
     width: 300px;
     height: 300px;
     background-color: #171717;
@@ -65,7 +75,7 @@
     margin: 0 20px;
     border: 2px solid #26262b;
     transition: all 0.3s;
-
+    padding: 20px;
 }
 
 #leftcard:hover,
@@ -142,7 +152,7 @@
 #yuedu{
     
     color: #5c5b5b;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     margin-top: 10px;
 }
@@ -152,6 +162,7 @@
     display: flex;
     align-items: end;
     justify-content: space-between;
+    
 }
 #time{
     color: #5c5b5b;
@@ -192,5 +203,46 @@
     height: 50px;
     margin-top: 20px;
     width: 390px;
+}
+#imgnor{
+    height: 150px;
+    width: 100%;
+    background-color: #03e4fd;
+    border-radius:9px;
+    border: 1px solid #5e5e71;
+}
+#bottom{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#introduce{
+    font-size: small;
+    font-weight: 600;
+    color: #5c5b5b;
+    height: 40px;
+    
+}
+#heading{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    
+}
+#jinrubtn2{
+    
+    height: 30px;
+    width: 100px;
+    background-color: #46dfd3;
+    color: #171717;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #46dfd3;
+    border-radius: 10px;
+    cursor: pointer;
 }
 </style>
