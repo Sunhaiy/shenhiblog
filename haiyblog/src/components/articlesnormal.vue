@@ -33,6 +33,7 @@ function toDetail(id){
 
 <style scoped>
 #root {
+    cursor: pointer;
     width: 250px;
     height: 250px;
     background-color: #171717;

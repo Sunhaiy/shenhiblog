@@ -14,10 +14,7 @@
 
         </div>
         <div id="center">
-            <span id="title"></span>
-            <div id="artcontiner">
-                <articles />
-            </div>
+            <articles/>
         </div>
         <div id="bottom">
             <SelectButton v-model="valuebootom" :options="optionbootom" optionLabel="name" id="selectbtn" />
@@ -118,20 +115,20 @@ getartciles()
 }
 
 #center {
-    flex: 1;
+    
     display: flex;
-    padding-top: 20px;
-    flex-direction: column;
-    align-items: center;
+    
+    
+    
 }
 
 #artcontiner {
 
-    flex: 1;
+    
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    width: 1350px;
+    
     align-items: center;
     justify-self: center;
     Flex-flow: row wrap;

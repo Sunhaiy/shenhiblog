@@ -26,6 +26,7 @@ console.log();
 
 <style scoped>
 #card{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 500px;

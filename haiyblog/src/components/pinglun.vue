@@ -58,6 +58,7 @@ const count =ref({
 
 
 .userprofile {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     margin-top: 15px;
@@ -71,6 +72,7 @@ const count =ref({
     background-color: rgb(46, 46, 46);
 }
 .userprofile2 {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     margin-top: 20px;
