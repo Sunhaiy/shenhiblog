@@ -7,6 +7,9 @@ import wenzhang from "@/view/wenzhang.vue";
 import liuyan from "@/view/liuyan.vue";
 import laisheng from "@/view/laisheng.vue";
 import article from "@/view/artdeteil.vue";
+import admin from "@/view/admin/admin.vue";
+
+import Artadmin from "@/view/admin/artadmin.vue";
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -46,6 +49,21 @@ const router = createRouter(
                 path:"/article/:id",
                 name:"article",
                 component:article
+            },
+            {
+                path:"/admin",
+                name:"admin",
+                component:admin,
+                children:[
+                    {
+                        path:"artadmin",
+                        name:"artadmin",
+                        component:Artadmin
+                        
+                    },
+                    
+                    
+                ]
             }
             
         ]
