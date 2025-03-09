@@ -9,7 +9,7 @@
             
         </div>
         <div id="bottom">
-            <Pinglun/>
+            <Pinglun :artid="artid"/>
         </div>
     </div>
 </template>
