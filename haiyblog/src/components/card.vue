@@ -31,14 +31,16 @@ console.log();
     flex-direction: column;
     width: 500px;
     margin: 10px;
-    background-color: #262626;
+    background-color: #171717;
     border-radius: 20px;
-    border: 1px solid #4e4d4d;
+    border: 2px solid #26262b;
     transition: all 0.3s;
+    filter: drop-shadow(0 0 0px rgb(0, 0, 0));
 }
 #card:hover{
     background-color: #2b2b2b;
-    border: 1px solid #696868;
+    border: 2px solid #46DFD3;
+    filter: drop-shadow(0 0 100px #46DFD3);
 }
 #heard{
     display: flex;
@@ -64,9 +66,7 @@ console.log();
 }
 #line{
     width: 100%;
-    border: 1px solid #4e4d4d;
-    
-    
+    border: 1px solid #26262b;
 }
 #time{
     font-weight: bold;

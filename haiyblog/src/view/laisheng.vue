@@ -69,13 +69,18 @@ function getid(id) {
     flex: 1;
     position: sticky;
     top: 0px;
-    background-color: #262626;
+    background-color: #171717;
     border-radius: 20px;
     margin: 0 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid #26262b;
+    transition: all 0.5s ease-in-out;
+}
+#right:hover{
+    border: 2px solid #c0dd19;
 }
 
 #content {

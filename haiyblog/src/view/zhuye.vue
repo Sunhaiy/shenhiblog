@@ -150,10 +150,14 @@ import Button from 'primevue/button';
 .huo{
     color: rgb(4, 205, 255);
     background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 1px;
 }
 .huo2{
     color: rgb(27, 247, 218);
     background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 1px;
 }
 #botomcontinercenten{
     display: flex;

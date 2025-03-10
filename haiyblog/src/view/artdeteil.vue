@@ -51,6 +51,7 @@ const {id} = route.params;
    
 }
 #tui{
+    cursor: pointer;
     position: sticky;
     top: 20px;
     margin-top: 60px;
@@ -66,7 +67,7 @@ const {id} = route.params;
     transition: all 0.5s;
 }
 #tui:hover{
-    background-color: #2A2929;
+    background-color: #171717;
     color: antiquewhite;
 }
 #center{

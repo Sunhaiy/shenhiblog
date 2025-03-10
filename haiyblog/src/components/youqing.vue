@@ -27,20 +27,21 @@ const props = defineProps(['list'])
 .root {
     height: 80px;
     width: 200px;
-    background-color: rgba(34, 36, 37, 0.667);
+    background-color: #171717;
     margin-left: 20px;
     margin-top: 10px;
     border-radius: 10px;
-    border: 2px solid rgba(34, 36, 37, 0.667);
+    border: 2px solid #26262b;
     display: flex;
     justify-content: start;
     align-items: center;
-    
+    filter: drop-shadow(0 0 0 #26262b);
     
     transition: border 0.2s ;
 }
 .root:hover{
-    border: 2px solid #e4e4f6;
+    border: 2px solid #46DFD3;
+    filter: drop-shadow(0 0 100px #46DFD3);
 }
 #linkitem{
     margin-left: 20px;

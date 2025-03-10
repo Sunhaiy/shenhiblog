@@ -32,10 +32,13 @@
     padding: 20px;
     overflow: hidden;
     filter: drop-shadow(0 0 10px #000000);
-    transition: filter 0.5s;
+    transition: all 0.5s;
+    border: 2px solid #c9a52e;
+    
 }
 #root4:hover {
-    filter: drop-shadow(0 0 20px #000000);
+    filter: drop-shadow(0 0 100px #c9a52e);
+    
 }
 #userart {
     border-radius: 20px;

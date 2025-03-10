@@ -29,8 +29,8 @@
 
 
 
-
-            <Button label="申请友链 ✨" @click="visible = true" id="tijiao"/>
+            <button @click="visible = true" id="tijiao">申请友链 ✨</button>
+            
             <Dialog v-model:visible="visible" modal header="友链申请" :style="{ width: '25rem' }">
                 <div id="dialog">
                     
@@ -137,7 +137,7 @@ function postdata() {
 }
 
 #bottom {
-
+    font-weight: 600;
     display: flex;
     flex-direction: column;
 
@@ -165,6 +165,7 @@ function postdata() {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-weight: 600;
 }
 
 #toubu {
@@ -198,7 +199,19 @@ function postdata() {
     position: fixed;
     bottom: 50px;
     right: 50px;
-    
+    background-color: #26262b;
+    border: 2px solid #171717;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 9px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#tijiao:hover{
+    background-color: #171717;
+    color: #7fffd4;
+    border: 2px solid #7fffd4;
+    filter: drop-shadow(0 0 100px #7fffd4);
 }
 #pinglun{
     max-width: 1000px;

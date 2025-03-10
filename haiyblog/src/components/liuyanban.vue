@@ -33,10 +33,10 @@ const props =defineProps(['list'])
 #root {
     display: flex;
     flex-direction: column;
-    border: 1px solid #3f3f46;
+    border: 2px solid #26262b;
     border-radius: 10px;
     padding: 20px;
-    background-color: #131313;
+    background-color: #171717;
     font-weight: 600;
     height: auto;
     width: 400px;
@@ -46,8 +46,8 @@ const props =defineProps(['list'])
     
 }
 #root:hover{
-    filter: drop-shadow(0px 0px 100px #e6d2d2);
-    
+    filter: drop-shadow(0px 0px 100px #dfb446);
+    border: 2px solid #dfb446;
 }
 #user{
     width: 200px;

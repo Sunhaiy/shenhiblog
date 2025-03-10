@@ -12,7 +12,7 @@
         </div>
     </div>
     <div id="right">
-        <liuyanban/>
+        
         
     </div>
 </div>
@@ -38,26 +38,28 @@ import liuyanban from './liuyanban.vue';
     margin-top: 10px;
     display: flex;
     overflow: hidden;
-    border: 1px ;
+    
     margin-right: 40px;
     filter: drop-shadow(0 0 10px #000000);
     transition: filter 0.5s;
+    border: 2px solid #26262b;
+    transition: all 0.5s;
 }
 #root5:hover {
     filter: drop-shadow(0 0 20px #000000);
+    border: 2px solid #46DFD3;
 }
 #gundong{
     display: flex;
     height: 80px;
     width: 500px;
     background-color: #0bffda;
-    
+    position: fixed;
     background-clip: border-box;
     align-items: center;
     transform: rotate(90deg);
     align-self: center;
-    position: relative;
-    left: 58px;
+    
     filter: drop-shadow(0 0 100px #0fbfd3);
     border: 3px solid #ffa10b;
     transition: border 0.5s;
@@ -89,8 +91,9 @@ import liuyanban from './liuyanban.vue';
 #right{
     flex: 1;
     display: flex;
+    flex-direction: column;
     padding: 10px;
-    
+    background-color: #0bffda;
 }
 
 @keyframes ch1 {
@@ -113,5 +116,11 @@ import liuyanban from './liuyanban.vue';
     color: #ffffff;
     font-size: 20px;
     font-weight: bolder;
+}
+#lineleft{
+    height: 400px;
+    width: 400px;
+    background-color: #171717;
+
 }
 </style>

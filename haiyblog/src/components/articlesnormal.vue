@@ -44,10 +44,11 @@ function toDetail(id){
     flex-direction: column;
     overflow: hidden;
     border: 2px solid #26262b;
-    transition: border 0.5s;
+    transition: all 0.5s ;
 }
 #root:hover{
     border: 2px solid #46dfd3;
+    filter: saturate(200%);
 }
 #top{
     overflow: hidden;
