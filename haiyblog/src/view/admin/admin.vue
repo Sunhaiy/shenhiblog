@@ -63,7 +63,7 @@ function luyou(name) {
     background-color: #171717;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -74,5 +74,8 @@ function luyou(name) {
     
     border: 2px solid #46dfd0;
 }
-
+#menuclk:active{
+    width: 65px;
+    height: 25px;
+}
 </style>
