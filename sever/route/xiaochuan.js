@@ -24,4 +24,14 @@ xiaochuanrouter.post('/xiaochuan/postlink',(req,res)=>{
         }
     })
 })
+xiaochuanrouter.post('/xiaochuan/admin',(req,res)=>{
+    const sql = `DELETE FROM link WHERE id = ${req.body.id}`
+    connection.query(sql,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json({code:1,msg:'删除成功'});
+        }
+    })
+})
 module.exports = xiaochuanrouter;

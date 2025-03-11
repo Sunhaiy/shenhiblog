@@ -7,6 +7,7 @@ const xiaochuan = require('./route/xiaochuan')
 const laisheng = require('./route/laisheng')
 const pinglunrouter = require('./route/pinglun.js')
 const db = require('./sql.js')
+const fs = require('fs')
 const app = express()
 const port = 2005;
 
@@ -16,6 +17,9 @@ app.use(zhuye).use(liuyan).use(articles).use(xiaochuan).use(laisheng).use(pinglu
 app.get('/', (req, res) => {
     res.end('haiy')
 })
+
+
+
 app.listen(port, () => {
     console.log(`server is running at http://localhost:${port}`)
 })

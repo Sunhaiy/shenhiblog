@@ -7,9 +7,13 @@ import wenzhang from "@/view/wenzhang.vue";
 import liuyan from "@/view/liuyan.vue";
 import laisheng from "@/view/laisheng.vue";
 import article from "@/view/artdeteil.vue";
-import admin from "@/view/admin/admin.vue";
 
+import admin from "@/view/admin/admin.vue";
 import Artadmin from "@/view/admin/artadmin.vue";
+import laishengadmin from "@/view/admin/laishengadmin.vue";
+import linkadmin from "@/view/admin/linkadmin.vue";
+import liuyanadmin from "@/view/admin/liuyanadmin.vue";
+import Adminquanju from "@/view/admin/adminquanju.vue";
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -54,13 +58,36 @@ const router = createRouter(
                 path:"/admin",
                 name:"admin",
                 component:admin,
+                redirect:"/admin/adminquanju",
                 children:[
                     {
-                        path:"artadmin",
+                        path:"zhuyeadmin",
                         name:"artadmin",
                         component:Artadmin
                         
                     },
+                    {
+                        path:"laishengadmin",
+                        name:"laishengadmin",
+                        component:laishengadmin
+                    },
+                    {
+                        path:"linkadmin",
+                        name:"linkadmin",
+                        component:linkadmin
+                    },
+                    {
+                        path:"liuyanadmin",
+                        name:"liuyanadmin",
+                        component:liuyanadmin
+                    },
+                    {
+                        path:"adminquanju",
+                        name:"adminquanju",
+                        component:Adminquanju
+                    }
+                    
+                    
                     
                     
                 ]

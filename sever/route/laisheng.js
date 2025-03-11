@@ -10,4 +10,24 @@ laishengrouter.get('/laisheng',(req,res)=>{
         }
     })
 })
+laishengrouter.get('laisheng/admin',()=>{
+    const quersql = 'SELECT * FROM laisheng'
+    connection.query(quersql,()=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json(results);
+        }
+    })
+})
+laishengrouter.post('/laisheng/admin',(req,res)=>{
+    const quersql = 'INSERT INTO laisheng SET ?'
+    connection.query(quersql,req.body,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json({code:1,msg:'添加成功'});
+        }
+    })
+})
 module.exports = laishengrouter;
