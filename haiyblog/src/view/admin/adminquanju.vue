@@ -1,6 +1,6 @@
 <template>
     <div id="admin">
-        <div id="datacontiner">
+        <div id="datacontiner" >
             <div class="cardinadmin">
                 <span class="pi pi-pencil font"> 文章</span>
                 <span class="flow">{{basicdata[0].count}}</span>

@@ -18,7 +18,7 @@ import { RouterView } from 'vue-router';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 const itemmenu  =ref( [
-    {name:'admin',label:'Home',icon:'pi pi-home'},
+    {name:'adminquanju',label:'Home',icon:'pi pi-home'},
     {name:'artadmin',label:'文章',icon:'pi pi-pencil'},
     {name:'laishengadmin',label:'来生',icon:'pi pi-pen-to-square'},
     {name:'liuyanadmin',label:'留言',icon:'pi pi-comment'},
@@ -28,7 +28,7 @@ function luyou(name) {
     router.push({name: name})
     
 }
-
+router.replace({name: 'adminquanju'})
 </script>
 
 

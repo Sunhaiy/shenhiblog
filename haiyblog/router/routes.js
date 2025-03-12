@@ -58,7 +58,7 @@ const router = createRouter(
                 path:"/admin",
                 name:"admin",
                 component:admin,
-                redirect:"/admin/adminquanju",
+                
                 children:[
                     {
                         path:"zhuyeadmin",

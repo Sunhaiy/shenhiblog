@@ -12,6 +12,18 @@ artrouter.get('/articles',(req,res)=>{
         res.json(results);
     })
 });
+artrouter.get('/articles/admin',(req,res)=>{
+    const quersql = 'SELECT * FROM articles'
+    connection.query(quersql,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json(results);
+            console.log(results);
+            
+        }
+    })
+});
 artrouter.get('/articles/:id',(req,res)=>{
     const querysql =`SELECT * FROM articles WHERE id = ${req.params.id}`
     connection.query(querysql,(err,results)=>{
@@ -23,16 +35,7 @@ artrouter.get('/articles/:id',(req,res)=>{
     })
 });
 
-artrouter.get('/articles/admin',(req,res)=>{
-    const quersql = 'SELECT * FROM articles'
-    connection.query(quersql,()=>{
-        if (err) {
-            console.log(err);
-        }else{
-            res.json(results);
-        }
-    })
-});
+
 artrouter.post('/articles/admin',(req,res)=>{
     const querysql =`INSERT INTO articles (title,content,created_at) values ('${req.body.title}','${req.body.content}','${req.body.time}')`
     connection.query(querysql,(err,results)=>{
