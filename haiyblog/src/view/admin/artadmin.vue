@@ -10,17 +10,30 @@
       <span class="fontmain  pi pi-sparkles flow2">{{ item.title }}</span>
       <span class="fontmain flow2">{{ item.author }}</span>
       <span class="fontmain flow2">{{ item.created_at }}</span>
-      <button class="mainbtn"><span class="pi pi-arrow-right fontmain">EDIT</span></button>
+      <button class="mainbtn" @click="intoeditor(item.id)"><span class="pi pi-arrow-right fontmain">EDIT</span></button>
     </div>
     <div id="wrtecontiner" v-show="!visiable">
       <div id="console">
-        <button class="kongzhi"><span class="pi pi-chart-bar fontmain">H</span></button>
+        
+        <div id="left">
+          <button class="kongzhi2" @click="changelayout"><span class="pi pi-images fontmain">返回</span></button>
+        </div>
+        <div id="center">
+          <button class="kongzhi"><span class="pi pi-chart-bar fontmain">H</span></button>
         <button class="kongzhi"><span class="pi pi-box fontmain">P</span></button>
         <button class="kongzhi"><span class="pi pi-images fontmain">I</span></button>
+        </div>
+        <div id="right">
+          <span class="fontmain">标题 :</span>
+          <input type="text" v-model="editdata[0].title" id="titlecpost" v-if="editdata"/>
+          <button class="kongzhi2"><span class="pi pi-images fontmain ">预览</span></button>
+          <button class="kongzhi2" @click="postchangedata(editdata)"><span class="pi pi-images fontmain ">提交</span></button>
+        </div>
         
       </div>
-      <div id="postdata">
-        <input type="text" id="inputinner">
+      
+      <div id="postdata" v-if="editdata">
+        <textarea name="" id="inputinner" v-model="editdata[0].content"></textarea>
       </div>
     </div>
   </div>
@@ -33,6 +46,9 @@ import axios from 'axios';
 import { ref } from 'vue';
 const nowdata = ref()
 const visiable  =ref(true)
+const editdata = ref()
+
+ 
 async function getartdata() {
   const data = await axios.get('http://127.0.0.1:2005/articles/admin')
   nowdata.value = data.data
@@ -41,8 +57,32 @@ async function getartdata() {
 }
 getartdata()
 function changelayout() {
-  visiable.value = !visiable
+  visiable.value = !visiable.value
+  console.log('change');
+  
 }
+async function intoeditor(id) {
+  visiable.value = !visiable
+  const getdata = await axios.get('http://127.0.0.1:2005/articles/'+id)
+  console.log(getdata.data);
+  
+  editdata.value = getdata.data
+}
+async function postchangedata() {
+  if (editdata.value) {
+    const postdata ={title:editdata.value[0].title,content:editdata.value[0].content,id:editdata.value[0].id}
+    console.log(editdata.value[0].title);
+    console.log(editdata.value[0].content);
+    const wanchengmessage =await axios.post('http://127.0.0.1:2005/articles/change',postdata)
+    console.log(wanchengmessage.data);
+  }
+  
+  
+}
+
+
+  
+
 </script>
 
 
@@ -180,12 +220,21 @@ function changelayout() {
 #console{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  
 }
 .kongzhi{
   height: 40px;
   width: 50px;
+  background-color: #1cdd7300;
+  border: 2px solid #1cdd73;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.kongzhi2{
+  height: 40px;
+  width: 100px;
   background-color: #1cdd7300;
   border: 2px solid #1cdd73;
   border-radius: 8px;
@@ -197,11 +246,22 @@ function changelayout() {
   background-color: #1cdd73;
   
 }
+.kongzhi2:hover{
+  
+  background-color: #1cdd73;
+  
+}
 .kongzhi:active{
   margin-left: 2px;
   margin-top: 2px;
   height: 38px;
   width: 48px;
+}
+.kongzhi2:active{
+  margin-left: 2px;
+  margin-top: 2px;
+  height: 38px;
+  width: 96px;
 }
 #postdata{
   flex: 1;
@@ -210,6 +270,41 @@ function changelayout() {
   height: 100%;
   width: 100%;
   margin-top: 10px;
-  word-wrap: break-word;
+  background-color: #101012;
+  border-radius: 9px;
+  border: 2px solid #26262b;
+  transition: all 0.2s;
+  resize: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+#inputinner:hover{
+  border: 2px solid #171717;
+}
+#inputinner:focus{
+  outline: none;
+}
+#center{
+  display: flex;
+  gap: 10px;
+}
+#left{
+  
+}
+#right{
+  display: flex;
+  gap: 10px;
+}
+#titlecpost{
+  border: 2px solid #26262b;
+  border-radius: 9px;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+#titlecpost:focus{
+  outline: none;
+}
+#titlecpost:hover{
+  border: 2px solid #1cdd73;
 }
 </style>

@@ -47,5 +47,16 @@ artrouter.post('/articles/admin',(req,res)=>{
     })
 })
 
-
+artrouter.post('/articles/change',(req,res)=>{
+    const querysql =`UPDATE articles SET title = '${req.body.title}',content = '${req.body.content}' WHERE id = ${req.body.id}`
+    connection.query(querysql,(err,results)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.json({code:1,msg:'修改成功'});
+            console.log(req.body);
+            
+        }
+    })
+})
 module.exports = artrouter;
