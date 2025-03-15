@@ -1,22 +1,19 @@
 <template>
   <div id="root">
     <div id="nav">
-      <div class="navlogo">
+      <div id="navlogo">
         <img src="./assets/logo.svg" id="imglogo">
       </div>
       <div id="navbtn">
-        <Button label="主页" icon="pi pi-home" class="menubtn" @click="tp('zhuye')" />
-        <Button label="文章" icon="pi pi-user-edit" class="menubtn" @click="tp('wenzhang')" />
-        <Button label="留言" icon="pi pi-at" class="menubtn" @click="tp('liuyan')" />
-        <Button label="来生" icon="pi pi-palette" class="menubtn" @click="tp('laisheng')" />
-        <Button label="小船" icon="pi pi-link" class="menubtn" @click="tp('xiaochuan')" />
-        <Button label="我的" icon="pi pi-user" class="menubtn" @click="tp('wode')" />
-
+        
+        <button id="newmenubtn" v-for="item in menuconfig" @click="tp(item.position)">
+          <span id="fontmain" :class="item.icon" >{{ item.label }}</span>
+        </button>
+        <hr>
       </div>
-      <div class="navinfor">
-        <Button icon="pi pi-cog" severity="secondary" rounded aria-label="Bookmark" />
-        <div>--------------------</div>
-        <Button label="我的头像" icon="pi pi-user" class="menubtn" />
+      
+      <div id="navinfor">
+        <span class="pi pi-home">123</span>
       </div>
     </div>
     <div id="body">
@@ -42,52 +39,78 @@
 #nav {
   margin: 40px;
   border-radius: 19px;
-  background-color: #18181B;
+  background-color: #171717;
   width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  border: 2px solid #26262b;
 }
 
-.menubtn {
-  margin: 20px;
-}
+
 
 #navbtn {
+  
   min-width: 200px;
   
   display: flex;
   flex-direction: column;
-
-}
-
-.navlogo {
-
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  top: 50px;
+  gap: 20px;
 }
 
-.navinfor {
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 #body {
   flex: 1;
   display: flex;
   padding: 40px 10px;
 }
-
+#navlogo{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 #imglogo {
   width: 50px;
   height: 50px;
+}
+#newmenubtn{
+  width: 150px;
+  align-self: center;
+  height: 40px;
+  border-radius: 9px;
+  border: 2px solid #26262b;
+  background-color: #171717;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+#newmenubtn:hover{
+  
+  filter: drop-shadow(0 0 100px #25b9c4);
+  background-color: #44e3d5;
+}
+#newmenubtn:active{
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: #44e3d5;
+}
+#fontmain{
+  font-weight: 600;
+  
+}
+hr {
+  width: 100%;
+  border: 1px solid #26262b;
+}
+#navinfor{
+  display: flex;
+
 }
 </style>
 
@@ -101,5 +124,14 @@ const router = useRouter();
 const tp = (position) => {
   router.push({ name: position })
 }
+const menuconfig =ref([
+  {label:'主页',icon:'pi pi-home',position:'zhuye'},
+  {label:'文章',icon:'pi pi-user-edit',position:'wenzhang'},
+  {label:'留言',icon:'pi pi-at',position:'liuyan'},
+  {label:'来生',icon:'pi pi-palette',position:'laisheng'},
+  {label:'小船',icon:'pi pi-link',position:'xiaochuan'},
+  {label:'我的',icon:'pi pi-user',position:'wode'},
+  
+])
 
 </script>

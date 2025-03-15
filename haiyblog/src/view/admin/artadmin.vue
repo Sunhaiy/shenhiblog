@@ -12,12 +12,15 @@
       <span class="fontmain flow2">{{ item.created_at }}</span>
       <button class="mainbtn"><span class="pi pi-arrow-right fontmain">EDIT</span></button>
     </div>
-    <div id="wrtecontiner">
+    <div id="wrtecontiner" v-show="!visiable">
       <div id="console">
-        <button></button>
+        <button class="kongzhi"><span class="pi pi-chart-bar fontmain">H</span></button>
+        <button class="kongzhi"><span class="pi pi-box fontmain">P</span></button>
+        <button class="kongzhi"><span class="pi pi-images fontmain">I</span></button>
+        
       </div>
       <div id="postdata">
-
+        <input type="text" id="inputinner">
       </div>
     </div>
   </div>
@@ -171,10 +174,42 @@ function changelayout() {
 #wrtecontiner{
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 #console{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+}
+.kongzhi{
+  height: 40px;
+  width: 50px;
+  background-color: #1cdd7300;
+  border: 2px solid #1cdd73;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.kongzhi:hover{
+  
+  background-color: #1cdd73;
+  
+}
+.kongzhi:active{
+  margin-left: 2px;
+  margin-top: 2px;
+  height: 38px;
+  width: 48px;
+}
+#postdata{
+  flex: 1;
+}
+#inputinner{
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  word-wrap: break-word;
 }
 </style>

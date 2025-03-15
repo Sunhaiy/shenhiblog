@@ -10,9 +10,9 @@ laishengrouter.get('/laisheng',(req,res)=>{
         }
     })
 })
-laishengrouter.get('laisheng/admin',()=>{
+laishengrouter.get('/laisheng/admin',(req,res)=>{
     const quersql = 'SELECT * FROM laisheng'
-    connection.query(quersql,()=>{
+    connection.query(quersql,(err,results)=>{
         if (err) {
             console.log(err);
         }else{
