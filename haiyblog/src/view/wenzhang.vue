@@ -7,9 +7,7 @@
                     <InputIcon class="pi pi-search" />
                     <InputText v-model="value12" placeholder="Search" />
                 </IconField>
-                <Button icon="pi pi-envelope" iconPos="top" id="btnright" />
-                <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle"
-                    id="touxiang" />
+                
             </div>
 
         </div>
@@ -34,8 +32,7 @@
 import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
-import Button from 'primevue/button';
-import Avatar from 'primevue/avatar';
+
 import SelectButton from 'primevue/selectbutton';
 import articles from '@/components/articles.vue';
 import articlesnormal from '@/components/articlesnormal.vue';
@@ -52,10 +49,10 @@ const options = ref([
     
 ]);
 const optionbootom = ref([
-    { name: '前端✨', value: 1 },
-    { name: '后端', value: 2 },
-    { name: 'nodejs', value: 3 },
-    { name: 'css', value: 4 },
+    { name: '封装✨', value: 1 },
+    { name: '测试😎', value: 2 },
+    { name: '版图😶‍🌫️', value: 3 },
+    { name: '嵌入式🚔', value: 4 },
     { name: '网络Iternet', value: 5 }
 ]);
 const data2 = ref([]);
@@ -95,10 +92,10 @@ getartciles()
 
 }
 
-#search,
-#btnright {
-    margin-right: 10px;
+#search{
+    margin-right: 20px;
 }
+
 
 #title {
     align-self: flex-start;

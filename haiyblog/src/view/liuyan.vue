@@ -1,8 +1,8 @@
 <template>
     <div id="root">
         <div id="top">
-            <h2>竹简✨</h2>
-            <span id="untitle">那就许愿我们共同花费的时间，在彼此心里有相等的价格。</span>
+            <h2>留言板✨</h2>
+            <span id="untitle">这里记录了大家在学习中遇到的问题，笔者看到后会出文章解答。</span>
         </div>
         <div id="center">
             <liuyanban :list="data" />

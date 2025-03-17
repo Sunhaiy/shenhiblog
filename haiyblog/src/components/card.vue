@@ -42,6 +42,10 @@ console.log();
     border: 2px solid #46DFD3;
     filter: drop-shadow(0 0 100px #46DFD3);
 }
+#card:active{
+    width: 480px;
+    
+}
 #heard{
     display: flex;
     align-items: center;

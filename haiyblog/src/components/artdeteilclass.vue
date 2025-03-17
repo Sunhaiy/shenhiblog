@@ -60,6 +60,7 @@ getcontent()
     display: flex;
     flex-direction: column;
     padding: 40px;
+    border:2px solid #26262b;
 }
 
 #titleart {

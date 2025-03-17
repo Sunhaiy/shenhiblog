@@ -50,6 +50,9 @@ function toDetail(id){
     border: 2px solid #46dfd3;
     filter: saturate(200%);
 }
+#root:active{
+    transform: scale(0.97);
+}
 #top{
     overflow: hidden;
     width: 100%;

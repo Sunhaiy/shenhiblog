@@ -4,9 +4,9 @@
         
         <div id="top">
             <h2>
-                小船🥰
+                Website🥰
             </h2>
-            <span id="untitle">从你的全世界路过~~</span>
+            <span id="untitle">这里记录了学习过程中可能会很有帮助的网站~~</span>
         </div>
         <div id="center">
 
@@ -14,24 +14,24 @@
             <Youqing :list="list"/>
         </div>
 
-        <div id="bottom">
-            <span id="uniner"><span id="toubu">#</span><span id="intronduce">门庭若市</span></span>
-            <span class="linkinronduce">🐳贵站必须长期运营满两个月</span>
-            <span class="linkinronduce">🐳贵站必须添加本站友链再发起申请</span>
-            <span class="linkinronduce">🐳笔者每天都会来看博客，三天内看到会处理</span>
-            <span class="linkinronduce">🐳本站自动检测友链</span>
-            <span id="uniner"><span id="toubu">#</span><span id="intronduce">奔走相告</span></span>
-            <span class="linkinronduce">✨博客名称:深海</span>
-            <span class="linkinronduce">✨博客链接:haiy.fun</span>
-            <span class="linkinronduce">✨博客图标:https://shenhi.jpg</span>
-            <span class="linkinronduce">✨博客简介:带着一项热情横冲直撞</span>
+        <div id="bottom" >
+            <span  id="uniner"><span id="toubu">#</span><span id="intronduce">门庭若市</span></span>
+            <span  class="linkinronduce">🐳提交网站必须长期运营</span>
+            <span  class="linkinronduce">🐳好的网站值得被看到！</span>
+            <span  class="linkinronduce">🐳笔者每天都会来看博客，三天内看到会处理</span>
+            <span  class="linkinronduce">🐳本站也会不定期减产网站时效性</span>
+            <span  id="uniner"><span id="toubu">#</span><span id="intronduce">奔走相告</span></span>
+            <span  class="linkinronduce">✨这些网站大部分为国外网站</span>
+            <span  class="linkinronduce">✨进入可能需要开启加速器</span>
+            <span  class="linkinronduce">✨如果你也想要分享站点</span>
+            <span  class="linkinronduce">✨可以点击右下角申请收录</span>
 
 
 
 
-            <button @click="visible = true" id="tijiao">申请友链 ✨</button>
+            <button @click="visible = true" id="tijiao">申请收录 ✨</button>
             
-            <Dialog v-model:visible="visible" modal header="友链申请" :style="{ width: '25rem' }">
+            <Dialog v-model:visible="visible" modal header="收录申请" :style="{ width: '25rem' }">
                 <div id="dialog">
                     
                     <div class="form">
@@ -78,7 +78,7 @@ import { useToast } from "primevue/usetoast";
 import pinglun from '../components/pinglun.vue'
 const toast = useToast();
 const visible = ref(false);
-
+const isvisi = ref(false)
 const list = ref([])
 const formdata =ref({
     name:'',

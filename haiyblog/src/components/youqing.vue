@@ -37,11 +37,14 @@ const props = defineProps(['list'])
     align-items: center;
     filter: drop-shadow(0 0 0 #26262b);
     
-    transition: border 0.2s ;
+    transition: all 0.2s ;
 }
 .root:hover{
     border: 2px solid #46DFD3;
     filter: drop-shadow(0 0 100px #46DFD3);
+}
+.root:active{
+    transform: scale(0.9);
 }
 #linkitem{
     margin-left: 20px;

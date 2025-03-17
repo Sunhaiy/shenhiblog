@@ -21,22 +21,22 @@
             <div class="conteinertextbottom">
                 <span class="bottombigtext"><span class="huo">生而不同</span></span>
                 <span class="bottombigtext">非同凡响</span>
-                <span class="bottombigtext">我有<span class="huo">病</span></span>
-                <span class="bottombigtext">治好了也流口水</span>
+                <span class="bottombigtext">沉浸<span class="huo">海</span></span>
+                <span class="bottombigtext">人生不过海海</span>
                 <span class="bottombigtext"><span class="huo">数据库</span>密码放github</span>
                 <span class="bottombigtext">回忆是两万公里的<span class="huo">海</span></span>
                 <span class="bottombigtext"><span class="huo">自命不凡</span></span>
                 <span class="bottombigtext">转人工</span>
                 <span class="bottombigtext">下划线</span>
                 <span class="bottombigtext"><span class="huo">踏雪寻梅</span></span>
-                <span class="bottombigtext">配音是wo自己唱的</span>
+                <span class="bottombigtext">写个博客要累死我了</span>
                 
                <span></span>
 
             </div>
             <div class="conteinertextbottom">
                 <span class="bottombigtext">想开一手公司试试</span>
-                <span class="bottombigtext"><span class="huo2">生活</span>把我基倒躺着<span class="huo2">确实比站着舒服</span></span>
+                <span class="bottombigtext"><span class="huo2">生活</span>把我击倒我会<span class="huo2">再次爬起来</span></span>
                 <span class="bottombigtext">让软件再次伟大</span>
                 <span class="bottombigtext"><span class="huo2">驯服blender</span></span>
                 <span class="bottombigtext">好景难遇</span>

@@ -2,7 +2,7 @@
     <div id="root">
         <div id="top">
             <button id="tui" @click="$router.go(-1)">
-               离开
+               <span class="pi pi-angle-left fontmain"></span>
             </button>
         </div>
         <div id="center">
@@ -60,15 +60,21 @@ const {id} = route.params;
     height: 50px;
     border-radius: 10px;
     align-self: center;
-    background-color: antiquewhite;
+    background-color: #171717;
     overflow: hidden;
     color: #2A2929;
     font-weight: bolder;
     transition: all 0.5s;
+    border: 2px solid #26262b;
 }
 #tui:hover{
-    background-color: #171717;
-    color: antiquewhite;
+    background-color: #44e3d5;
+    filter: drop-shadow(0 0 100px #44e3d5);
+}
+#tui:active{
+    background-color: #44e3d5;
+    filter: drop-shadow(0 0 100px #44e3d5);
+    transform: scale(0.9);
 }
 #center{
     flex: 3;
@@ -103,5 +109,9 @@ a{
     text-decoration: none;
     outline: none;
     color: inherit;
+}
+.fontmain{
+    color: aliceblue;
+    font-weight: 600;
 }
 </style>

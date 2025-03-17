@@ -33,11 +33,11 @@
     overflow: hidden;
     filter: drop-shadow(0 0 10px #000000);
     transition: all 0.5s;
-    border: 2px solid #c9a52e;
+    border: 2px solid #f3f0e7;
     
 }
 #root4:hover {
-    filter: drop-shadow(0 0 100px #c9a52e);
+    filter: drop-shadow(0 0 100px #f5f3ed);
     
 }
 #userart {

@@ -2,7 +2,7 @@
     <div class="root1">
         <div id="leftcard">
             <div id="info">
-                <span id="title">一篇文章教会你驯服VUE3 ！</span>
+                <span id="title">射频电路等设计原理 ！</span>
                 <span id="author">by <span>Haiy</span></span>
                 <span id="fenlei" >精选✨</span>
                 <span id="tagcontiner" >#threejs #blender #after #after#after#after#after#after#after#after</span>
@@ -21,8 +21,8 @@
                 <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" alt="" id="imgnor">
             </div>
             <div id="bottom">
-                <span id="heading">Head</span>
-                <span id="introduce">这里是这篇文章一条简短的简介这里是这篇文章一条简短的简介这里是这篇文章一条简短的简介</span>
+                <span id="heading">集成电路制造工艺</span>
+                <span id="introduce">深入探讨集成电路制造的各个环节，以及先进节点工艺的挑战与发展趋势。</span>
                 <button id="jinrubtn2">春和景明</button>
             </div>
         </div>
@@ -64,6 +64,7 @@
     display: flex;
 }
 
+
 .rightcard {
     display: flex;
     flex-direction: column;
@@ -84,7 +85,12 @@
     border: 2px solid #46dfd3;
 
 }
+#leftcard:active,
+.rightcard:active {
+    transform: scale(0.9);
+    
 
+}
 #info {
     display: flex;
     flex-direction: column;
@@ -203,6 +209,15 @@
     height: 50px;
     margin-top: 20px;
     width: 390px;
+    transition: all 0.3s;
+}
+#jinru:hover{
+    background-color: #03e4fd;
+    color: #171717;
+    border: 2px solid #03e4fd;
+}
+#jinru:active{
+    transform: scale(0.9);
 }
 #imgnor{
     height: 150px;
@@ -244,5 +259,14 @@
     border: 2px solid #46dfd3;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+#jinrubtn2:hover{
+    background-color: #03e4fd;
+    color: #171717;
+    border: 2px solid #03e4fd;
+}
+#jinrubtn2:active{
+    transform: scale(0.9);
 }
 </style>
