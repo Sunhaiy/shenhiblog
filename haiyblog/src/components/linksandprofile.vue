@@ -13,11 +13,11 @@
             </div>
         </div>
         <div id="right">
-            <span class="pi pi-map-marker fontorg flow">孫海洋__SUNHAIY</span>
+            <span class="pi pi-map-marker fontorg flow">博客名称</span>
             <span class="pi pi-twitter fontorg flow">带着一箱热情横冲直撞~~~</span>
-            <span class="pi pi-phone fontorg flow">19861473786</span>
-            <span class="pi pi-inbox fontorg flow">S744129991@OUTLOOK.COM</span>
-            <span class="pi pi-map-marker fontorg flow">现居于青岛市城阳区</span>
+            <span class="pi pi-phone fontorg flow">123456789</span>
+            <span class="pi pi-inbox fontorg flow">expample@OUTLOOK.COM</span>
+            <span class="pi pi-map-marker fontorg flow">现居于XX市XX区</span>
             <hr>
             <span class="pi pi-link fontorg spe">LINKs</span>
             <div id="linkcontiner">

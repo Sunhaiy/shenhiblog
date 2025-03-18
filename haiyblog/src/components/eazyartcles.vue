@@ -2,9 +2,9 @@
     <a href="">
         <div id="root4">
 
-            <img src="../assets/IMG_20241227_191953.jpg" alt="shenhi" id="userart">
+            <img src="../assets/1742186245750.jpg" alt="shenhi" id="userart">
             <span id="fenlei">WEB DESIGN</span>
-            <span id="title">Sun HaiY </span>
+            <span id="title">Author position </span>
             <div id="btn2"></div>
             
         </div>

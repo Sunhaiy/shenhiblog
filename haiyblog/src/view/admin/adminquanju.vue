@@ -23,15 +23,15 @@
             <span class="font">全局配置</span>
             <hr>
             <span class="configfont">站点名称:</span>
-            <div class="configfont2">孫海洋‘s blog ！</div>
+            <div class="configfont2">笔者‘s blog ！</div>
             <span class="configfont">描述:</span>
             <span class="configfont2">This is my new blog</span>
             <hr>
             <button class="change"><span class="pi pi-lock changspn">Edit</span></button>
         </div>
         <div id="rightcatd">
-            <img src="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" alt="" id="adminimg">
-            <div class="configfont2">孫海洋</div>
+            <img src="@/assets/1742186245750.jpg" alt="" id="adminimg">
+            <div class="configfont2">笔者</div>
             <span class="configfont">与生俱来的力量</span>
             <hr>
             <div id="linkcontiner">
