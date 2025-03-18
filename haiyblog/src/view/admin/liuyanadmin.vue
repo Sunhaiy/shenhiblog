@@ -1,6 +1,6 @@
 <template>
      <div id="admin">
-          <editor modulevalue="2" :id="4"/>
+          <editor modulevalue="1" :id="null"/>
      </div>
 </template>
 

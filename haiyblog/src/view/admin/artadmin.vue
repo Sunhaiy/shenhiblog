@@ -1,5 +1,6 @@
 <template>
   <div id="admin">
+    <Toast />
     <div id="edit" v-show="visiable">
       <span class="pi pi-book fontmain flow">标题</span>
       <span class="pi pi-user fontmain flow">作者</span>
@@ -28,6 +29,7 @@
           <input type="text" v-model="editdata[0].title" id="titlecpost" v-if="editdata"/>
           <button class="kongzhi2"><span class="pi pi-images fontmain ">预览</span></button>
           <button class="kongzhi2" @click="postchangedata(editdata)"><span class="pi pi-images fontmain ">提交</span></button>
+          
         </div>
         
       </div>
@@ -44,6 +46,9 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import { Toast } from 'primevue';
+import { useToast } from 'primevue';
+const toast = useToast();
 const nowdata = ref()
 const visiable  =ref(true)
 const editdata = ref()
@@ -75,6 +80,12 @@ async function postchangedata() {
     console.log(editdata.value[0].content);
     const wanchengmessage =await axios.post('http://127.0.0.1:2005/articles/change',postdata)
     console.log(wanchengmessage.data);
+    if (wanchengmessage.data.code ==1) {
+      toast.add({ severity: 'success', summary: '提交成功', detail: '修改成功，快去前台看看效果！', life: 5000 });
+      visiable.value = !visiable.value
+    }else{
+      toast.add({ severity: 'error', summary: '提交失败', detail: '请检查网络连接或者联系管理员！', life: 5000 });
+    }
   }
   
   

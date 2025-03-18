@@ -37,11 +37,14 @@ artrouter.get('/articles/:id',(req,res)=>{
 
 
 artrouter.post('/articles/admin',(req,res)=>{
-    const querysql =`INSERT INTO articles (title,content,created_at) values ('${req.body.title}','${req.body.content}','${req.body.time}')`
+    const querysql =`INSERT INTO articles (title,content) values ('${req.body.title}','${req.body.content}')`
     connection.query(querysql,(err,results)=>{
         if (err) {
             console.log(err);
+
         }else{
+            console.log(req.body);
+            
             res.json({code:1,msg:'发表成功'});
         }
     })
