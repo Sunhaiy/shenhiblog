@@ -1,19 +1,19 @@
 <template>
   <div id="admin">
     <Toast />
-    <div id="edit" v-show="visiable">
+    <div id="edit" v-show="visiableedit">
       <span class="pi pi-book fontmain flow">标题</span>
       <span class="pi pi-user fontmain flow">作者</span>
       <span class="pi pi-calendar-clock fontmain flow">时间</span>
-      <button class="mainbtn2" @click="changelayout"><span class="pi pi-plus fontmain ">写作</span></button>
+      <button class="mainbtn2" @click="changenew"><span class="pi pi-plus fontmain ">写作</span></button>
     </div>
-    <div id="bodyfy" v-for="item in nowdata" key="{{item.id}}" v-show="visiable">
+    <div id="bodyfy" v-for="item in nowdata" key="{{item.id}}" v-show="visiableedit">
       <span class="fontmain  pi pi-sparkles flow2">{{ item.title }}</span>
       <span class="fontmain flow2">{{ item.author }}</span>
       <span class="fontmain flow2">{{ item.created_at }}</span>
       <button class="mainbtn" @click="intoeditor(item.id)"><span class="pi pi-arrow-right fontmain">EDIT</span></button>
     </div>
-    <div id="wrtecontiner" v-show="!visiable">
+    <div id="wrtecontiner" v-show="visiablewrite">
       <div id="console">
         
         <div id="left">
@@ -38,7 +38,9 @@
         <textarea name="" id="inputinner" v-model="editdata[0].content"></textarea>
       </div>
     </div>
+    <editor :modulevalue="1" v-if="visiablenew" :backhome="backhome"/>
   </div>
+  
 </template>
 
 
@@ -48,12 +50,15 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { Toast } from 'primevue';
 import { useToast } from 'primevue';
+import editor from '@/components/editor.vue';
 const toast = useToast();
 const nowdata = ref()
-const visiable  =ref(true)
+
 const editdata = ref()
 
- 
+const visiableedit = ref(true)
+const visiablewrite = ref(false)
+const visiablenew = ref(false)
 async function getartdata() {
   const data = await axios.get('http://127.0.0.1:2005/articles/admin')
   nowdata.value = data.data
@@ -61,13 +66,26 @@ async function getartdata() {
 
 }
 getartdata()
+function backhome(){
+  visiablewrite.value = false
+  visiableedit.value = true
+  visiablenew.value = false
+}
 function changelayout() {
-  visiable.value = !visiable.value
-  console.log('change');
+  visiablewrite.value = false
+  visiableedit.value = true
+  visiablenew.value = false
   
 }
+function changenew() {
+  visiablewrite.value = false
+  visiableedit.value = false
+  visiablenew.value = true
+}
 async function intoeditor(id) {
-  visiable.value = !visiable
+  visiablewrite.value = true
+  visiableedit.value = false
+  visiablenew.value = false
   const getdata = await axios.get('http://127.0.0.1:2005/articles/'+id)
   console.log(getdata.data);
   
@@ -82,7 +100,9 @@ async function postchangedata() {
     console.log(wanchengmessage.data);
     if (wanchengmessage.data.code ==1) {
       toast.add({ severity: 'success', summary: '提交成功', detail: '修改成功，快去前台看看效果！', life: 5000 });
-      visiable.value = !visiable.value
+      visiablewrite.value = false
+      visiableedit.value = true
+
     }else{
       toast.add({ severity: 'error', summary: '提交失败', detail: '请检查网络连接或者联系管理员！', life: 5000 });
     }
@@ -120,6 +140,8 @@ async function postchangedata() {
   display: flex;
   justify-content: space-between;
   padding: 8px;
+  position: sticky;
+  top: 0px;
 }
 
 .mainbtn {
@@ -156,7 +178,7 @@ async function postchangedata() {
 
 }
 .mainbtn2:hover {
-
+  background-color: #1cdd73;
   border: 2px solid #1cdd73;
   filter: drop-shadow(0 0 100px #1cdd73);
 

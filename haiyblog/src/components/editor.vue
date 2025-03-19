@@ -3,7 +3,7 @@
     <Toast />
     <div id="console">
       <div id="left">
-        <button class="kongzhi2"><span class="pi pi-images fontmain">返回</span></button>
+        <button class="kongzhi2" @click="backhome()"><span class="pi pi-images fontmain">返回</span></button>
       </div>
       <div id="center">
         <button class="kongzhi"><span class="pi pi-chart-bar fontmain">H</span></button>
@@ -31,8 +31,9 @@ import axios from 'axios'
 import { Toast } from 'primevue';
 import { useToast } from 'primevue';
 const toast = useToast();
-const props = defineProps(['id', 'modulevalue'])
+const props = defineProps(['id', 'modulevalue','backhome'])
 const visiable = ref(false)
+
 const newdata = ref({
   
   title: "",
@@ -41,6 +42,7 @@ const newdata = ref({
 })
 function isnew() {
   if (props.id) {
+    console.log(props.modulevalue,props.id);
     getdata(props.id, props.modulevalue)
   }
   else {
@@ -49,9 +51,15 @@ function isnew() {
     }
     newdata.value.title = ""
     newdata.value.content = ""
+    console.log(props.id,props.modulevalue);
+    
   }
+  
+  
 }
 isnew()
+
+
 async function getdata(id, modulevalue) {
   if (modulevalue == 2) {
     console.log('来生modelgetvalue');
@@ -90,7 +98,7 @@ async function postnewdata(){
   }
   if (props.modulevalue == 1 && newdata.value.content && newdata.value.title ) {
     const message =await axios.post('http://127.0.0.1:2005/articles/admin', newdata.value)
-    
+    message.data.code == 1 ? toast.add({ severity: 'success', summary: '成功', detail: '提交成功', life: 3000 }) : toast.add({ severity: 'error', summary: '失败', detail: '提交失败', life: 3000 });
   }
 }
 async function postdata(id) {

@@ -1,6 +1,7 @@
 <template>
-     <div id="admin">
+     <div id="admin" v-show="!visiable">
           <div id="laishengcardfy">
+               
                <div id="laishengcard" v-for="item in laishengget" key="item.id">
                     <div class="head">
                          <span class="pi pi-bolt mainfont">-{{ item.time }}</span>
@@ -10,13 +11,15 @@
                          <span>{{ item.title }}</span>
                     </div>
                     <div id="consolebtncontiner">
-                         <button class="consolebtn"><span class="pi pi-arrow-right mainfont3">EDIT</span></button>
+                         <button class="consolebtn" @click="change(item.id)"><span class="pi pi-arrow-right mainfont3">EDIT</span></button>
                          <button class="consolebtn2"><span class="pi pi-trash mainfont2">DELETE</span></button>
                     </div>
                </div>
           </div>
 
      </div>
+     <editor v-if="visiable" :id="itemsids" :modulevalue="2" :backhome="backhome"/>
+     <button id="floatbtn" @click="newdata()"><span class="pi pi-plus mainfont">写作</span></button>
 </template>
 
 
@@ -24,8 +27,12 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import editor from '@/components/editor.vue';
 
+const visiable = ref(false);
 const laishengget = ref();
+const itemsids = ref(null)
+const editorloading =ref(false)
 async function getlaisheng() {
      const data = await axios.get('http://127.0.0.1:2005/laisheng/admin')
      laishengget.value = data.data
@@ -33,6 +40,21 @@ async function getlaisheng() {
 
 }
 getlaisheng()
+function change(id) {
+     visiable.value = true
+     
+     itemsids.value = id
+}
+function newdata() {
+     visiable.value = true
+     itemsids.value = null
+     
+}
+function backhome() {
+     visiable.value = false
+     itemsids.value = null
+     
+}
 </script>
 
 
@@ -96,6 +118,7 @@ hr {
 
 #laishengcardfy {
      display: flex;
+     flex-direction: column;
      flex-flow: row wrap;
 }
 
@@ -147,5 +170,25 @@ hr {
 .mainfont3{
      font-weight: 600;
      
+}
+#floatbtn{
+     position: fixed;
+     bottom: 80px;
+     right: 50px;
+     height: 50px;
+     width: 100px;
+     border: 2px solid #26262b;
+     background-color: #171717;
+     border-radius: 9px;
+     transition: all 0.2s;
+     cursor: pointer;
+}
+#floatbtn:hover{
+     border: 2px solid #debc10;
+     background-color: #debc10;
+     filter: drop-shadow(0 0 100px #debc10);
+}
+#floatbtn:active{
+     transform: scale(0.9);
 }
 </style>
